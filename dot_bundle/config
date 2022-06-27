@@ -1,0 +1,2 @@
+---
+BUNDLE_BUILD__PG: "--with-pg-config=/Applications/Postgres.app/Contents/Versions/latest/bin/pg_config"

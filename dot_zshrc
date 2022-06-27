@@ -1,0 +1,34 @@
+# Environment
+export EDITOR='rubymine -e --wait'
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export PATH=/opt/homebrew/bin:~/.dotfiles/bin:$PATH
+
+# Homebrew
+export HOMEBREW_NO_ENV_HINTS=1
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"  
+fi
+
+# ZSH completions
+autoload -Uz compinit
+compinit
+
+# Starship
+eval "$(starship init zsh)"
+
+# asdf
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Aliases
+alias c='clear'
+alias cd..='cd ..'
+alias cp='cp -i'
+alias la='ls -al'
+alias ll='ls -l'
+alias ls='lsd'
+alias mv='mv -i'
+alias rm='rm -i'
+alias tree='lsd --tree'
