@@ -16,6 +16,9 @@ fi
 autoload -Uz compinit
 compinit
 
+# 1Password completions
+eval "$(op completion zsh)"; compdef _op op
+
 # Starship
 eval "$(starship init zsh)"
 
