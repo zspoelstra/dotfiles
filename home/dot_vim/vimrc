@@ -1,0 +1,61 @@
+" Make sure we are not running in compatible mode 
+if &compatible
+	set nocompatible
+endif
+
+" Vim-plug
+call plug#begin()
+
+Plug 'gruvbox-community/gruvbox'
+Plug 'arcticicestudio/nord-vim'
+
+call plug#end()
+
+" Turn on syntax highlighting
+syntax on
+
+" Line numbers
+set number
+
+" Backspace mapping
+set backspace=indent,eol,start
+
+" Ignore case when searching
+set ignorecase
+
+" Attempt to be smart with cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Do incremental searching
+set incsearch
+
+" Show the previous command
+set showcmd
+
+" Filetype plugins
+filetype plugin on
+filetype indent on
+
+" Always show the current position
+set ruler
+
+" Use spaces instead of tabs
+set expandtab
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Auto indent
+set autoindent
+
+" Smart indent
+set smartindent
+
+" Colors
+colorscheme nord
+set background=dark
+set termguicolors
