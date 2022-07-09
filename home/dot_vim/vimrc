@@ -59,3 +59,7 @@ set smartindent
 colorscheme nord
 set background=dark
 set termguicolors
+
+" Change cursor on insert and normal modes
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
