@@ -1,5 +1,5 @@
 # Environment
-export EDITOR='code --wait'
+export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=~/.local/bin:$PATH
@@ -26,10 +26,17 @@ eval "$(starship init zsh)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+# FZF config
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
+
 # Aliases
 alias c='clear'
 alias cd..='cd ..'
 alias cp='cp -i'
+alias cz='chezmoi'
 alias la='ls -al'
 alias ll='ls -l'
 alias ls='lsd'
