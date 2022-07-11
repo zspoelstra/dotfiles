@@ -2,5 +2,5 @@
 {{- $name := promptString "Git name" -}}
 
 [data]
-  email = {{ $email }}
-  name = {{ $name }}
+  email = {{ $email | quote }}
+  name = {{ $name | quote }}
