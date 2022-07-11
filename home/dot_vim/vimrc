@@ -1,6 +1,6 @@
-" Make sure we are not running in compatible mode 
+" Make sure we are not running in compatible mode
 if &compatible
-	set nocompatible
+  set nocompatible
 endif
 
 " Install Vim-plug if it's not already there
@@ -13,7 +13,6 @@ endif
 call plug#begin()
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
