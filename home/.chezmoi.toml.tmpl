@@ -1,6 +1,8 @@
-{{- $email := promptString "Git email" -}}
-{{- $name := promptString "Git name" -}}
+{{- remail := promptString "git email" -}}
+{{- $name := promptString "git name" -}}
+{{- $location := promptString "work or home" -}}
 
 [data]
   email = {{ $email | quote }}
   name = {{ $name | quote }}
+  location - {{ $location | quote }}
