@@ -52,7 +52,7 @@ let &t_EI = "\e[2 q"
 
 " Keymappings for FZF
 nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <C-f> :Rg<CR>
+"nnoremap <silent> <C-f> :Rg<CR>
 
 " Airline config
 let g:airline_powerline_fonts = 1
