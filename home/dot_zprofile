@@ -1,2 +1,0 @@
-# Homebrew
-eval "$(`which brew` shellenv)"
