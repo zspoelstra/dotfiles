@@ -46,7 +46,6 @@ set tabstop=2
 
 " Set our colorscheme
 colorscheme gruvbox 
-let g:gruvbox_contrast_dark = 'hard'
 
 " Change cursor on insert and normal modes
 let &t_SI = "\e[6 q"
