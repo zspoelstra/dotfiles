@@ -13,6 +13,7 @@ endif
 call plug#begin()
 
 Plug 'arcticicestudio/nord-vim'
+Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline'
@@ -23,8 +24,8 @@ call plug#end()
 " Move the .viminfo file into .vim
 set viminfo+=n~/.vim/viminfo
 
-filetype plugin indent on " File type detection
-syntax on " Syntax highlighting
+filetype plugin indent on               " File type detection
+syntax on                               " Syntax highlighting
 
 set background=dark                     " Dark colors
 set backspace=indent,eol,start          " Make backspace work correctly
@@ -44,15 +45,16 @@ set softtabstop=2
 set tabstop=2
 
 " Set our colorscheme
-colorscheme nord
+colorscheme gruvbox 
+let g:gruvbox_contrast_dark = 'hard'
 
 " Change cursor on insert and normal modes
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Keymappings for FZF
+" Keymappings 
 nnoremap <silent> <C-p> :Files<CR>
-"nnoremap <silent> <C-f> :Rg<CR>
 
-" Airline config
+" Configs
 let g:airline_powerline_fonts = 1
+let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.4, 'relative': v:true, 'yoffset': 1.0 } }
