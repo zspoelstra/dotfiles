@@ -39,7 +39,7 @@ set softtabstop=2
 set tabstop=2
 
 " Set our colorscheme
-colorscheme gruvbox 
+colorscheme everforest
 
 " Change cursor on insert and normal modes
 let &t_SI = "\e[6 q"
