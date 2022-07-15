@@ -46,6 +46,10 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 " Keymappings 
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
 nnoremap <silent> <C-p> :Files<CR>
 
 " Configs
