@@ -41,11 +41,14 @@ set tabstop=2
 " Set our colorscheme
 colorscheme everforest
 
+" Strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Change cursor on insert and normal modes
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Keymappings 
+" Keymappings
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
