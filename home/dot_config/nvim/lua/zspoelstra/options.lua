@@ -9,6 +9,7 @@ opt.softtabstop = 2
 opt.splitbelow = true
 opt.splitright = true
 opt.tabstop = 2
+opt.termguicolors = true
 opt.wrap = false
 
 -- Set the color scheme

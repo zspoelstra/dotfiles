@@ -31,7 +31,10 @@ return require('packer').startup(function(use)
   use 'arcticicestudio/nord-vim'
 
   -- Status line
-  use 'feline-nvim/feline.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Ruby/Rails
   use 'tpope/vim-endwise'
