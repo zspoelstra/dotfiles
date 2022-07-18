@@ -14,9 +14,3 @@ opt.wrap = false
 
 -- Set the color scheme
 vim.cmd 'colorscheme everforest'
-
--- Strip trailing whitesapce
-vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-  pattern = { '*' },
-  command = [[%s/\s\+$//e]],
-})
