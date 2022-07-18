@@ -33,8 +33,17 @@ return require('packer').startup(function(use)
   -- Status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
+
+  -- Language server
+  use 'neovim/nvim-lspconfig'
 
   -- Ruby/Rails
   use 'tpope/vim-endwise'
