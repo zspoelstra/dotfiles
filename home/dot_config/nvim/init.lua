@@ -1,6 +1,7 @@
 require('plugins.packer')
 require('plugins.lspconfig')
 require('plugins.lualine')
+require('plugins.nvim-cmp')
 require('plugins.treesitter')
 require('zspoelstra.options')
 require('zspoelstra.keymaps')
