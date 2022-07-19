@@ -27,8 +27,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Themes
-  use 'sainnhe/everforest'
   use 'arcticicestudio/nord-vim'
+  use 'dracula/vim'
+  use 'sainnhe/everforest'
 
   -- Status line
   use {
