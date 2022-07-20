@@ -2,7 +2,7 @@
 export HOMEBREW_NO_ENV_HINTS=1
 if type brew &>/dev/null
 then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"  
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
 # ZSH completions
@@ -36,6 +36,7 @@ alias lt='ls --tree'
 alias mv='mv -i'
 alias rm='rm -i'
 alias tree='lt'
+alias vim='nvim'
 {{ if .work }}
 alias nuwoof='cd ~/Development/nuwoof'
 alias woof='cd ~/Development/utfb/woof'
