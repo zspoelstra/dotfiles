@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   -- Themes
   use 'arcticicestudio/nord-vim'
   use 'dracula/vim'
+  use 'overcache/NeoSolarized'
   use 'sainnhe/everforest'
 
   -- Status line
