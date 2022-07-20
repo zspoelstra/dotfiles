@@ -1,10 +1,8 @@
 -- Install packer
--- or                            , branch = '0.1.x',
--- or                            , branch = '0.1.x',
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
+  PACKER_BOOTSTRAP = fn.system({
     'git',
     'clone',
     '--depth',
@@ -19,7 +17,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost packer.lua source <afile> | PackerCompile
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
 
@@ -47,6 +45,7 @@ return require('packer').startup(function(use)
   }
 
   -- Telescope
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { 'nvim-lua/plenary.nvim' },
@@ -63,7 +62,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-endwise'
 
   -- Automatic setup
-  if packer_bootstrap then
+  if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
 end)
