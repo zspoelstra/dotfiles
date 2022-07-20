@@ -1,4 +1,6 @@
 -- Install packer
+-- or                            , branch = '0.1.x',
+-- or                            , branch = '0.1.x',
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -35,13 +37,19 @@ return require('packer').startup(function(use)
   -- Status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    requires = { 'kyazdani42/nvim-web-devicons' },
   }
 
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    requires = { 'nvim-lua/plenary.nvim' },
   }
 
   -- Language server
