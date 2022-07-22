@@ -13,4 +13,4 @@ opt.termguicolors = true
 opt.wrap = false
 
 -- Set the color scheme
-vim.cmd 'colorscheme everforest'
+vim.cmd "colorscheme everforest"

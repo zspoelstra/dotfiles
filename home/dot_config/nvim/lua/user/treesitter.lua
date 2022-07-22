@@ -1,7 +1,7 @@
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup {
   ensure_installed = {
-    'lua',
-    'ruby'
+    "lua",
+    "ruby"
   },
   highlight = {
     enabled = true
