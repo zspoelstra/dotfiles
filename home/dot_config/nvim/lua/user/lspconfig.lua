@@ -1,9 +1,18 @@
+-- Load cmp_nvim_lsp
+local cmp_lsp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_lsp_ok then
+  return
+end
+
+-- Load lspconfig
+local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_ok then
+  return
+end
+
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
-
--- nvim-lspconfig
-local lspconfig = require("lspconfig")
+capabilities = cmp_lsp.update_capabilities(capabilities)
 
 -- Ruby
 lspconfig.solargraph.setup {

@@ -1,6 +1,11 @@
+local null_ls_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_ok then
+  return
+end
+
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-require("null-ls").setup({
+null_ls.setup({
   sources = {
     require("null-ls").builtins.formatting.prettier,
   },
