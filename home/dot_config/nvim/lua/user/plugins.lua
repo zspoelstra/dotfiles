@@ -57,6 +57,11 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function() require('null-ls').setup() end,
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
 
   -- Ruby/Rails
   use 'tpope/vim-endwise'
