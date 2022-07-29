@@ -14,9 +14,19 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_lsp.update_capabilities(capabilities)
 
+-- Keymaps
+local on_attach_keymaps = function(_, bufnr)
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+end
+
 -- Ruby
 lspconfig.solargraph.setup {
   capabilities = capabilities,
+  on_attach = on_attach_keymaps,
 }
 
 -- Lua
@@ -39,6 +49,7 @@ lspconfig.sumneko_lua.setup {
     },
   },
   on_attach = function(client, bufnr)
+    on_attach_keymaps(client, bufnr)
     if client.resolved_capabilities.document_formatting then
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -51,4 +62,13 @@ lspconfig.sumneko_lua.setup {
       })
     end
   end
+}
+
+-- Javascript + TypeScript
+lspconfig.tsserver.setup {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    on_attach_keymaps(client, bufnr)
+    client.resolved_capabilities.document_formatting = false
+  end,
 }

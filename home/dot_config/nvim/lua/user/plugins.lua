@@ -32,7 +32,7 @@ return require("packer").startup(function(use)
   use "overcache/NeoSolarized"
   use "sainnhe/everforest"
 
-  -- Status line
+  -- UI
   use {
     "nvim-lualine/lualine.nvim",
     requires = { "kyazdani42/nvim-web-devicons" },

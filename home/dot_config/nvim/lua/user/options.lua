@@ -5,6 +5,7 @@ opt.expandtab = true
 opt.number = true
 opt.ruler = true
 opt.shiftwidth = 2
+opt.signcolumn = "number"
 opt.softtabstop = 2
 opt.splitbelow = true
 opt.splitright = true

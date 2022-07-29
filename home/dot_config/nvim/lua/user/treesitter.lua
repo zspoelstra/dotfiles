@@ -5,13 +5,22 @@ end
 
 treesitter.setup {
   ensure_installed = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "json",
     "lua",
-    "ruby"
+    "ruby",
+    "scss",
+    "typescript",
+    "yaml",
   },
   highlight = {
-    enabled = true
+    additional_vim_regex_highlighting = false,
+    enable = true,
   },
   indent = {
-    enabled = false
+    enable = false,
   },
 }
