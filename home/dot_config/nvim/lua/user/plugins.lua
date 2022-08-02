@@ -27,9 +27,6 @@ return require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
   -- Themes
-  use "arcticicestudio/nord-vim"
-  use "dracula/vim"
-  use "overcache/NeoSolarized"
   use "sainnhe/everforest"
 
   -- UI
@@ -52,16 +49,20 @@ return require("packer").startup(function(use)
   }
 
   -- Language server
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
-  use "hrsh7th/nvim-cmp"
-  use "hrsh7th/cmp-nvim-lsp"
-  use "L3MON4D3/LuaSnip"
-  use "saadparwaiz1/cmp_luasnip"
   use {
     "jose-elias-alvarez/null-ls.nvim",
     config = function() require("null-ls").setup() end,
     requires = { "nvim-lua/plenary.nvim" },
   }
+
+  -- Autocomplete
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
 
   -- Ruby/Rails
   use "tpope/vim-endwise"
