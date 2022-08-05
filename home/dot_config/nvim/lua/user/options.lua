@@ -12,6 +12,3 @@ opt.splitright = true
 opt.tabstop = 2
 opt.termguicolors = true
 opt.wrap = false
-
--- Set the color scheme
-vim.cmd "colorscheme everforest"
