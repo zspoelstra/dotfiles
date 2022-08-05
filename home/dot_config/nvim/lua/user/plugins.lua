@@ -28,6 +28,8 @@ return require("packer").startup(function(use)
 
   -- Themes
   use "sainnhe/everforest"
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use "EdenEast/nightfox.nvim"
 
   -- UI
   use {
