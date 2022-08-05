@@ -1,5 +1,6 @@
 require("user.autocmd")
 require("user.cmp")
+require("user.colorscheme")
 require("user.keymaps")
 require("user.lspconfig")
 require("user.lualine")
