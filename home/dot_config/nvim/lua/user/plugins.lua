@@ -42,6 +42,7 @@ return require("packer").startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = function() require("nvim-treesitter.install").update({ with_sync = true }) end,
   }
+  use { "RRethy/nvim-treesitter-endwise" }
 
   -- Telescope
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
@@ -66,8 +67,11 @@ return require("packer").startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip"
 
-  -- Ruby/Rails
-  use "tpope/vim-endwise"
+  -- Autopairs
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- Automatic setup
   if PACKER_BOOTSTRAP then

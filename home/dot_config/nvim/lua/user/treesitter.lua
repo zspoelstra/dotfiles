@@ -4,6 +4,9 @@ if not treesitter_ok then
 end
 
 treesitter.setup {
+  endwise = {
+    enable = true
+  },
   ensure_installed = {
     "css",
     "graphql",
