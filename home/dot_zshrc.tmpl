@@ -19,6 +19,12 @@ eval "$(starship init zsh)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 . $(brew --prefix asdf)/libexec/asdf.sh
 
+# Yarn
+if type yarn &> /dev/null
+then
+  export PATH="$(yarn global bin):$PATH"
+fi
+
 # FZF config
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules,.git}"'
