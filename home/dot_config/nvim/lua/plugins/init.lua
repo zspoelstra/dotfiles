@@ -22,6 +22,9 @@ return require("packer").startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "nvim-lua/plenary.nvim"
 
+  -- Syntax
+  use "slim-template/vim-slim"
+
   -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
 
