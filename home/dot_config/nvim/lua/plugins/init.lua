@@ -27,6 +27,11 @@ return require("packer").startup(function(use)
 
   -- Themes
   use { "catppuccin/nvim", as = "catppuccin" }
+  use {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    tag = "v1.*",
+  }
 
   -- UI
   use "nvim-lualine/lualine.nvim"
