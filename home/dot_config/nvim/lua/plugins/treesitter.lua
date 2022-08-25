@@ -24,6 +24,6 @@ treesitter.setup {
     enable = true,
   },
   indent = {
-    enable = false,
+    enable = true,
   },
 }
