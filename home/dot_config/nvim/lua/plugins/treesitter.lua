@@ -4,6 +4,9 @@ if not treesitter_ok then
 end
 
 treesitter.setup {
+  autotag = {
+    enable = true,
+  },
   endwise = {
     enable = true
   },
