@@ -25,10 +25,8 @@ then
   export PATH="$(yarn global bin):$PATH"
 fi
 
-# FZF config
-if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!{node_modules,.git}"'
-fi
+# Ripgrep
+export RIPGREP_CONFIG_PATH="/Users/zspoelstra/.config/ripgrep/config"
 
 # Aliases
 alias c='clear'
