@@ -57,12 +57,12 @@ return require("packer").startup(function(use)
 
   -- Telescope
   use {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "make"
-  }
-  use {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x"
+    branch = "0.1.x",
+    requires = {
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+    }
   }
 
   -- Language server
