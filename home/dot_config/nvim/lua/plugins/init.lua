@@ -33,6 +33,17 @@ return require("packer").startup(function(use)
     tag = "v1.*",
   }
 
+  -- File Explorer
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  }
+
   -- UI
   use "nvim-lualine/lualine.nvim"
 

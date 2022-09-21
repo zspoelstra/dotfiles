@@ -15,7 +15,7 @@ keymap.set("n", "<Down>", "")
 -- Telescope mappings
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
-keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
+keymap.set("n", "<leader>fg", ":Telescope live_grep_args<CR>")
 
 -- Window navigation
 keymap.set("n", "<C-h>", "<C-w>h")
@@ -26,3 +26,7 @@ keymap.set("n", "<C-l>", "<C-w>l")
 -- Page up/down and center
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Neotree
+keymap.set("n", "<leader>nn", ":Neotree toggle<CR>")
+keymap.set("n", "<leader>nr", ":Neotree reveal<CR>")
