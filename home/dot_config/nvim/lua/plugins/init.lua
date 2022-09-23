@@ -18,15 +18,10 @@ return require("packer").startup(function(use)
   -- Manage packer itself
   use "wbthomason/packer.nvim"
 
-  -- Dependencies
-  use "kyazdani42/nvim-web-devicons"
-  use "nvim-lua/plenary.nvim"
-
   -- Syntax
   use "slim-template/vim-slim"
 
   -- Themes
-  use { "catppuccin/nvim", as = "catppuccin" }
   use {
     "rose-pine/neovim",
     as = "rose-pine",
@@ -79,6 +74,9 @@ return require("packer").startup(function(use)
 
   -- Autopairs
   use "windwp/nvim-autopairs"
+
+  -- WhichKey
+  use "folke/which-key.nvim"
 
   -- Automatic setup
   if PACKER_BOOTSTRAP then
