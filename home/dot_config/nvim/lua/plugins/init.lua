@@ -40,7 +40,12 @@ return require("packer").startup(function(use)
   }
 
   -- UI
-  use "nvim-lualine/lualine.nvim"
+  use {
+    "nvim-lualine/lualine.nvim",
+    config = function ()
+      require('lualine.nvim').setup {}
+    end
+  }
 
   -- Treesitter
   use {
@@ -73,13 +78,26 @@ return require("packer").startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
 
   -- Autopairs
-  use "windwp/nvim-autopairs"
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
 
   -- WhichKey
   use "folke/which-key.nvim"
 
   -- bufdelete
   use "famiu/bufdelete.nvim"
+
+  -- Comment
+  use {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup {}
+    end
+  }
 
   -- Automatic setup
   if PACKER_BOOTSTRAP then
