@@ -5,11 +5,18 @@ end
 
 wk.setup {}
 wk.register({
+  ["<Esc>"] = { ":nohl<cr>", "Clear Search Highlight" },
+  ["<C-h>"] = { "<C-w>h", "Window Left" },
+  ["<C-j>"] = { "<C-w>j", "Window Down" },
+  ["<C-k>"] = { "<C-w>k", "Window Up" },
+  ["<C-l>"] = { "<C-w>l", "Window Right" },
+  ["<C-d>"] = { "<C-d>zz", "Page Down" },
+  ["<C-u>"] = { "<C-u>zz", "Page Up" },
   ["<leader>"] = {
     b = {
       name = "+buffers",
       b = { ":Telescope buffers<cr>", "Search Buffers" },
-      d = { ":bd", "Delete Buffer" },
+      d = { ":Bdelete<cr>", "Delete Buffer" },
     },
     e = {
       name = "+explorer",
