@@ -78,6 +78,9 @@ return require("packer").startup(function(use)
   -- WhichKey
   use "folke/which-key.nvim"
 
+  -- bufdelete
+  use "famiu/bufdelete.nvim"
+
   -- Automatic setup
   if PACKER_BOOTSTRAP then
     require("packer").sync()
