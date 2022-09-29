@@ -29,6 +29,7 @@ fi
 export RIPGREP_CONFIG_PATH="/Users/zspoelstra/.config/ripgrep/config"
 
 # Aliases
+alias bex='bundle exec'
 alias c='clear'
 alias cd..='cd ..'
 alias cp='cp -i'
