@@ -41,7 +41,10 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias tree='lt'
 alias vim='nvim'
-{{ if .work }}
-alias nuwoof='cd ~/Development/nuwoof'
-alias woof='cd ~/Development/utfb/woof'
-{{ end }}
+
+# Aliases (work)
+alias code="cd ~/Code"
+alias utfb-nuwoof="code &&cd nuwoof"
+alias utfb-packages-js="code && cd utfb-packages"
+alias utfb-packages-ruby="code && cd utfb-packages-ruby"
+alias utfb-woof="code && cd utfb/woof"
