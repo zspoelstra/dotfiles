@@ -15,6 +15,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_lsp.update_capabilities(capabilities)
 
 -- Keymaps
+vim.keymap.set("n", "ge", vim.diagnostic.open_float)
+
 local on_attach_keymaps = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)

@@ -42,8 +42,8 @@ return require("packer").startup(function(use)
   -- UI
   use {
     "nvim-lualine/lualine.nvim",
-    config = function ()
-      require('lualine.nvim').setup {}
+    config = function()
+      require("lualine.nvim").setup()
     end
   }
 
@@ -81,7 +81,7 @@ return require("packer").startup(function(use)
   use {
     "windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup {}
+      require("nvim-autopairs").setup()
     end
   }
 
@@ -95,7 +95,7 @@ return require("packer").startup(function(use)
   use {
     "numToStr/Comment.nvim",
     config = function()
-      require("Comment").setup {}
+      require("Comment").setup()
     end
   }
 
