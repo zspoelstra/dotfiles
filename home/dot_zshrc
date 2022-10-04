@@ -45,7 +45,8 @@ alias vim='nvim'
 
 # Aliases (work)
 alias code="cd ~/Code"
-alias utfb-nuwoof="code &&cd nuwoof"
+alias utfb-gem-push="gem push --key github --host https://rubygems.pkg.github.com/untappd"
+alias utfb-nuwoof="code && cd nuwoof"
 alias utfb-packages-js="code && cd utfb-packages"
 alias utfb-packages-ruby="code && cd utfb-packages-ruby"
 alias utfb-woof="code && cd utfb/woof"
