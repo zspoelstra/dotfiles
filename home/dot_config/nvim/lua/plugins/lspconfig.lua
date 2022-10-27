@@ -53,7 +53,7 @@ lspconfig.sumneko_lua.setup {
   },
   on_attach = function(client, bufnr)
     on_attach_keymaps(client, bufnr)
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
       vim.api.nvim_create_autocmd("BufWritePre", {
@@ -72,6 +72,6 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach_keymaps(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end,
 }
