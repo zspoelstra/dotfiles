@@ -7,6 +7,7 @@ opt.number = true
 opt.relativenumber = true
 opt.ruler = true
 opt.shiftwidth = 2
+opt.shortmess:append("I")
 opt.signcolumn = "number"
 opt.softtabstop = 2
 opt.splitbelow = true
