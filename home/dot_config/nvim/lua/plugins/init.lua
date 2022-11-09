@@ -13,6 +13,13 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepath
 end
 
+-- Compile this file when we make changes
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = vim.api.nvim_create_augroup("PackerCompiler", {}),
+  pattern = fn.expand("~") .. "/.config/nvim/lua/plugins/init.lua",
+  command = "source <afile> | PackerCompile"
+})
+
 -- Install plugins
 return require("packer").startup(function(use)
   -- Manage packer itself
