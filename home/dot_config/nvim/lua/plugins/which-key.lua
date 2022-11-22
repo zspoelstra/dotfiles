@@ -18,6 +18,11 @@ wk.register({
       b = { ":Telescope buffers<cr>", "Search Buffers" },
       d = { ":Bdelete<cr>", "Delete Buffer" },
     },
+    c = {
+      name = "+copy",
+      f = { ":let @+ = expand(\"%:t\")<cr>", "File Name" },
+      p = { ":let @+ = expand(\"%\")<cr>", "File Path"},
+    },
     e = {
       name = "+explorer",
       e = { ":Neotree toggle<cr>", "Toggle Explorer" },
