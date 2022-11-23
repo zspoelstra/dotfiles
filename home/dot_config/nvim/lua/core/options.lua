@@ -1,8 +1,10 @@
 local opt = vim.opt
 
 -- Basic settings
+opt.cmdheight = 0
 opt.cursorline = true
 opt.expandtab = true
+opt.laststatus = 3
 opt.number = true
 opt.relativenumber = true
 opt.ruler = true
