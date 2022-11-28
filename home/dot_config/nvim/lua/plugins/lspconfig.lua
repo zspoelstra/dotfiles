@@ -75,3 +75,8 @@ lspconfig.tsserver.setup {
     client.server_capabilities.document_formatting = false
   end,
 }
+
+-- CSS
+lspconfig.cssls.setup {
+  capabilities = capabilities
+}
