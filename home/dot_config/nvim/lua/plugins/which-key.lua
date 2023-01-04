@@ -30,12 +30,13 @@ wk.register({
       r = { ":Neotree reveal<cr>", "Reveal File" },
     },
     f = {
-      name = "+file",
+      name = "+find",
       f = { ":Telescope find_files<cr>", "Find File" },
       g = { ":Telescope live_grep_args<cr>", "Live Grep" },
       h = { ":Telescope help_tags<cr>", "Help Tags" },
       o = { ":Telescope oldfiles<cr>", "Open Recent Files" },
-      r = { ":Telescope resume<cr>", "Resume" },
+      r = { ":Telescope resume<cr>", "Resume Search" },
+      w = { ":Telescope grep_string<cr>", "Search Current Word"}
     }
   }
 })

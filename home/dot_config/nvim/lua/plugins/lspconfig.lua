@@ -39,7 +39,10 @@ lspconfig.sumneko_lua.setup {
     Lua = {
       runtime = { version = "LuaJIT", },
       diagnostics = { globals = { "vim" }, },
-      workspace = { library = vim.api.nvim_get_runtime_file("", true), },
+      workspace = {
+        checkThirdParty = false,
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
       telemetry = { enabled = false, },
       format = {
         enable = true,
