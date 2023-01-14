@@ -11,8 +11,7 @@ if not lspconfig_ok then
 end
 
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = cmp_lsp.default_capabilities(capabilities)
+local capabilities = cmp_lsp.default_capabilities()
 
 -- Keymaps
 vim.keymap.set("n", "ge", vim.diagnostic.open_float)
@@ -56,7 +55,7 @@ lspconfig.sumneko_lua.setup {
   },
   on_attach = function(client, bufnr)
     on_attach_keymaps(client, bufnr)
-    if client.server_capabilities.document_formatting then
+    if client.server_capabilities.documentFormattingProvider then
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
       vim.api.nvim_create_autocmd("BufWritePre", {
