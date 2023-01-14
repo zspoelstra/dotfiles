@@ -63,6 +63,7 @@ return require("packer").startup(function(use)
     end
   }
   use "RRethy/nvim-treesitter-endwise"
+  use "nvim-treesitter/nvim-treesitter-textobjects"
   use "windwp/nvim-ts-autotag"
 
   -- Telescope
