@@ -110,6 +110,15 @@ return require("packer").startup(function(use)
     end
   }
 
+  -- nvim-surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function()
+      require("nvim-surround").setup({})
+    end
+  })
+
   -- Automatic setup
   if PACKER_BOOTSTRAP then
     require("packer").sync()
