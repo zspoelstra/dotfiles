@@ -1,29 +1,19 @@
-local telescope_ok, telescope = pcall(require, "telescope")
-if not telescope_ok then
-  return
-end
-
-local live_grep_args_ok, live_grep_args = pcall(require, "telescope-live-grep-args.actions")
-if not live_grep_args_ok then
-  return
-end
-
-telescope.setup {
-  defaults = {
-    file_ignore_patterns = { ".git/", "node_modules" },
-    path_display = { "truncate" }
+return {
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim"
   },
-  extensions = {
-    live_grep_args = {
-      auto_quoting = true,
-      mappings = {
-        i = {
-          ["<C-k>"] = live_grep_args.quote_prompt(),
-        }
-      }
-    }
+  keys = {
+    -- Find
+    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Files" },
+    { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+  },
+  opts = {
+    defaults = {
+      file_ignore_patterns = { ".git/", "node_modules" },
+      path_display = { "truncate" }
+    },
   }
 }
-
-telescope.load_extension("fzf")
-telescope.load_extension("live_grep_args")
