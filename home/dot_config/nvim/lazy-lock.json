@@ -1,5 +1,7 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "8077428e63feb0f3bf795d53b23ba1695b28ab0e" },
+  "mini.bufremove": { "branch": "main", "commit": "8464390c932556dbb298ccf8a7587d6ef765e94f" },
   "nvim-treesitter": { "branch": "master", "commit": "a9f0b1c2ba1d70de9189e1ade0e65346ad08849b" },
+  "persistence.nvim": { "branch": "main", "commit": "d8a3eda0e19b4d5f3180fc832c25baab1709f2a1" },
   "rose-pine": { "branch": "main", "commit": "4d6b2a2fe4a0fea30c7808559b06be46624bc587" }
 }
