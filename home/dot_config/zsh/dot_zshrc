@@ -43,6 +43,14 @@ fi
 # Ripgrep
 export RIPGREP_CONFIG_PATH="/Users/zspoelstra/.config/ripgrep/config"
 
+# zsh-vi-mode
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
+
 # Aliases
 alias bex='bundle exec'
 alias c='clear'
@@ -51,7 +59,7 @@ alias cp='cp -i'
 alias cz='chezmoi'
 alias la='ls -al'
 alias ll='ls -l'
-alias ls='lsd --ignore-glob=Icon\[\]'
+alias ls="lsd --ignore-glob=$'Icon\r'"
 alias lt='ls --tree'
 alias mv='mv -i'
 alias rm='rm -i'
