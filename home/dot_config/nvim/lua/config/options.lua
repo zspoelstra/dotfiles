@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
+opt.clipboard = "unnamedplus"
 opt.expandtab = true
 opt.grepprg = "rg --vimgrep"
 opt.number = true
@@ -20,7 +21,6 @@ opt.wrap = false
 
 -- Probably want these, but should know what they do first ;)
 -- opt.autowrite = true
--- opt.clipboard = "unnamedplus"
 -- opt.cmdheight = 0
 -- opt.confirm = true
 -- opt.cursorline = true
