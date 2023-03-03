@@ -1,0 +1,15 @@
+{
+  "fidget.nvim": { "branch": "main", "commit": "688b4fec4517650e29c3e63cfbb6e498b3112ba1" },
+  "lazy.nvim": { "branch": "main", "commit": "8d18ef44e769e98a8dc974ca85275de1d8cc7c04" },
+  "lualine.nvim": { "branch": "master", "commit": "e99d733e0213ceb8f548ae6551b04ae32e590c80" },
+  "mini.bufremove": { "branch": "main", "commit": "8464390c932556dbb298ccf8a7587d6ef765e94f" },
+  "mini.comment": { "branch": "main", "commit": "9fc3fe43129e8c2611bd21b8f50af8c0d0742533" },
+  "mini.pairs": { "branch": "main", "commit": "0256717c9364ad6b5384c37b4f96fb4f7cc74867" },
+  "neodev.nvim": { "branch": "main", "commit": "c6b8ff8f0d261c8fb99a55ec7cc5dcf9cb928293" },
+  "nvim-treesitter": { "branch": "master", "commit": "a0d6c28f893cbbc761cfa7fc7204ba6f3e2710cf" },
+  "persistence.nvim": { "branch": "main", "commit": "adcf6913693a0434665d162ee45a186230496f8a" },
+  "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
+  "rose-pine": { "branch": "main", "commit": "4d6b2a2fe4a0fea30c7808559b06be46624bc587" },
+  "telescope-fzf-native.nvim": { "branch": "main", "commit": "580b6c48651cabb63455e97d7e131ed557b8c7e2" },
+  "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" }
+}
