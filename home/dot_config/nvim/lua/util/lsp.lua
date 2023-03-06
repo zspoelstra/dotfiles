@@ -8,20 +8,13 @@ end
 function M.on_attach(client, bufnr)
   vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
   vim.keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
-
-  if client.server_capabilities["documentFormattingProvider"] then
-    vim.keymap.set("n", "<leader>cf", M.format, { desc = "Format Document" })
-  end
-
-  if client.server_capabilities["documentRangeFormattingProvider"] then
-    vim.keymap.set("v", "<leader>cf", M.format, { desc = "Format Range" })
-  end
-
-  if client.server_capabilities["definitionProvider"] then
-    vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto Definition" })
-  end
-
+  vim.keymap.set("n", "<leader>cf", M.format, { desc = "Format Document" })
+  vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto Definition" })
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Goto Declaration" })
+  vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { desc = "Goto Implementation" })
   vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References" })
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+  vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Documentation" })
 
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_create_autocmd("BufWritePre", {
