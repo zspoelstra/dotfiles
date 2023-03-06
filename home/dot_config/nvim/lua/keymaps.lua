@@ -1,3 +1,6 @@
+--
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+
 -- better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -13,3 +16,9 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+
+-- Disable the arrow keys in normal mode
+vim.keymap.set("n", "<Left>", "")
+vim.keymap.set("n", "<Right>", "")
+vim.keymap.set("n", "<Up>", "")
+vim.keymap.set("n", "<Down>", "")
