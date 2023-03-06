@@ -5,7 +5,7 @@ then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-#
+# Functions
 fpath=($ZDOTDIR/functions $fpath)
 autoload -Uz $ZDOTDIR/functions/*(:t)
 
