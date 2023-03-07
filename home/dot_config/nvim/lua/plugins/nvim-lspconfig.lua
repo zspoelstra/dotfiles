@@ -3,7 +3,6 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       { "folke/neodev.nvim", config = true },
-      { "j-hui/fidget.nvim", config = true },
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },
