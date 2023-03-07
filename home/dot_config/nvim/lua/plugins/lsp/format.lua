@@ -2,7 +2,12 @@ local M = {}
 
 function M.format()
   local bufnr = vim.api.nvim_get_current_buf()
-  vim.lsp.buf.format({ bufnr = bufnr })
+  vim.lsp.buf.format({
+    bufnr = bufnr,
+    filter = function(client)
+      return client.name == "null-ls"
+    end,
+  })
 end
 
 function M.on_attach(client, bufnr)
