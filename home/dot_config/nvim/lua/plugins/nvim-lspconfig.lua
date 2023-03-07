@@ -9,12 +9,16 @@ return {
     opts = {
       servers = {
         lua_ls = {
-          Lua = {
-            workspace = { checkThirdParty = false },
-            telemetry = { enable = false },
+          settings = {
+            Lua = {
+              workspace = { checkThirdParty = false },
+              telemetry = { enable = false },
+            },
           },
         },
-        solargraph = {},
+        solargraph = {
+          init_options = { formatting = false },
+        },
       },
     },
     config = function(_, opts)
@@ -29,7 +33,8 @@ return {
       local function setup(server)
         require("lspconfig")[server].setup({
           capabilities = capabilities,
-          settings = opts.servers[server],
+          init_options = opts.servers[server].init_options,
+          settings = opts.servers[server].settings,
         })
       end
 
