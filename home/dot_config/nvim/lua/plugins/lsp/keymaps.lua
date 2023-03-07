@@ -1,7 +1,7 @@
 local M = {}
 
 function M.on_attach(_, _)
-  local format = require('plugins.lsp.format').format
+  local format = require("plugins.lsp.format").format
 
   vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
   vim.keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
@@ -11,7 +11,7 @@ function M.on_attach(_, _)
   vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { desc = "Goto Implementation" })
   vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References" })
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
-  vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Documentation" })
+  -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Documentation" })
 end
 
 return M
