@@ -10,7 +10,7 @@ return {
       local keymaps = {
         mode = { "n", "v" },
         ["<leader>b"] = { name = "+buffer" },
-        -- ["<leader>c"] = { name = "+code" },
+        ["<leader>c"] = { name = "+code" },
         ["<leader>f"] = { name = "+file/find" },
         ["<leader>q"] = { name = "+quit/session" },
       }
