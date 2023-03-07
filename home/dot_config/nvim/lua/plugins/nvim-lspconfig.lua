@@ -15,6 +15,7 @@ return {
             telemetry = { enable = false },
           },
         },
+        solargraph = {},
       },
     },
     config = function(_, opts)
