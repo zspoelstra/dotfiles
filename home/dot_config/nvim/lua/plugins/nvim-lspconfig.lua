@@ -21,10 +21,14 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
+      require("plugins.lsp.core").on_attach(function(client, bufnr)
+        require("plugins.lsp.format").on_attach(client, bufnr)
+        require("plugins.lsp.keymaps").on_attach(client, bufnr)
+      end)
+
       local function setup(server)
         require("lspconfig")[server].setup({
           capabilities = capabilities,
-          on_attach = require("util.lsp").on_attach,
           settings = opts.servers[server],
         })
       end
