@@ -1,15 +1,15 @@
 return {
-	{
-		"folke/persistence.nvim",
-		opts = {
-			options = {
-				"buffers",
-				"curdir",
-				"tabpages",
-				"winsize",
-				"help",
-				"globals",
-			},
-		},
-	},
+  {
+    "folke/persistence.nvim",
+    opts = {
+      options = {
+        "buffers",
+        "curdir",
+        "tabpages",
+        "winsize",
+        "help",
+        "globals",
+      },
+    },
+  },
 }
