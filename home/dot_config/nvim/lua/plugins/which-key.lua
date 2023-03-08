@@ -12,6 +12,7 @@ return {
         ["<leader>b"] = { name = "+buffer" },
         ["<leader>c"] = { name = "+code" },
         ["<leader>f"] = { name = "+file/find" },
+        ["<leader>g"] = { name = "+goto" },
         ["<leader>q"] = { name = "+quit/session" },
       }
       wk.register(keymaps)
