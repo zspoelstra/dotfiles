@@ -8,6 +8,7 @@ return {
       "RRethy/nvim-treesitter-endwise",
     },
     opts = {
+      context_commentstring = { enable = true, enable_autocmd = false },
       highlight = { enable = true },
       indent = { enable = true },
       endwise = {
