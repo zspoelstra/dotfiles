@@ -8,18 +8,17 @@ return {
     },
     opts = function()
       local cmp = require("cmp")
+      local cmp_types = require("cmp.types.cmp")
       local luasnip = require("luasnip")
 
       return {
         mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-space>"] = cmp.mapping.complete({}),
+          ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),
           ["<C-e"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          ["<S-CR>"] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
+          ["<CR>"] = cmp.mapping.confirm({
+            behavior = cmp_types.ConfirmBehavior.Insert,
+            select = false,
           }),
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -40,6 +39,7 @@ return {
             end
           end, { "i", "s" }),
         }),
+        preselect = cmp.PreselectMode.None,
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -48,6 +48,7 @@ return {
         sources = {
           { name = "nvim_lsp" },
           { name = "luasnip" },
+          { name = "buffer" },
         },
       }
     end,
