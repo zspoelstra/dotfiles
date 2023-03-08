@@ -5,10 +5,14 @@ return {
     build = ":TSUpdate",
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
+      "RRethy/nvim-treesitter-endwise",
     },
     opts = {
       highlight = { enable = true },
       indent = { enable = true },
+      endwise = {
+        enable = true,
+      },
       ensure_installed = {
         "bash",
         "help",
