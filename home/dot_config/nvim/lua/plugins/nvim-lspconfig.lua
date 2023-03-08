@@ -9,16 +9,17 @@ return {
     opts = {
       servers = {
         lua_ls = {
-          settings = {
-            Lua = {
-              workspace = { checkThirdParty = false },
-              telemetry = { enable = false },
-            },
+          Lua = {
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
           },
         },
-        solargraph = {
-          init_options = { formatting = false },
-        },
+        solargraph = {},
+      },
+      setup = {
+        solargraph = function(_, opts)
+          opts.init_options = { formatting = false }
+        end,
       },
     },
     config = function(_, opts)
@@ -31,11 +32,15 @@ return {
       end)
 
       local function setup(server)
-        require("lspconfig")[server].setup({
-          capabilities = capabilities,
-          init_options = opts.servers[server].init_options,
-          settings = opts.servers[server].settings,
-        })
+        local server_opts = vim.tbl_deep_extend("force", {
+          capabilities = vim.deepcopy(capabilities),
+        }, opts.servers[server] or {})
+
+        if opts.setup[server] then
+          opts.setup[server](server, server_opts)
+        end
+
+        require("lspconfig")[server].setup(server_opts)
       end
 
       require("mason-lspconfig").setup({ ensure_installed = vim.tbl_keys(opts.servers) })
