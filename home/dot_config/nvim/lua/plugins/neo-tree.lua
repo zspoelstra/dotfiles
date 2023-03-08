@@ -14,6 +14,14 @@ return {
     },
     opts = {
       close_if_last_window = true,
+      default_component_configs = {
+        indent = {
+          with_expanders = true,
+          expander_collapsed = "",
+          expander_expanded = "",
+          expander_highlight = "NeoTreeExpander",
+        },
+      },
       window = {
         mappings = {
           ["h"] = function(state)
@@ -34,6 +42,7 @@ return {
               end
             end
           end,
+          ["<space>"] = "none",
         },
       },
     },
