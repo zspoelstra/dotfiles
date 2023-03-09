@@ -5,7 +5,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      variant = "moon",
+      dark_variant = "moon",
     },
     config = function(_, opts)
       require("rose-pine").setup(opts)
