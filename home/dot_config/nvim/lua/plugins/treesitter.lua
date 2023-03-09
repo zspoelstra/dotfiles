@@ -17,6 +17,7 @@ return {
       },
       ensure_installed = {
         "bash",
+        "css",
         "help",
         "html",
         "javascript",
@@ -26,6 +27,7 @@ return {
         "markdown_inline",
         "regex",
         "ruby",
+        "scss",
         "tsx",
         "typescript",
         "vim",
