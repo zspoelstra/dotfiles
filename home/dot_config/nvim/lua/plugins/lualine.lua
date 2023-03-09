@@ -11,10 +11,12 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diagnostics" },
-        lualine_c = {},
+        lualine_c = { "filename" },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { { "location", padding = 0 } },
+        lualine_z = {
+          { "location", padding = { left = 0, right = 1 } },
+        },
       },
       extensions = { "neo-tree" },
     },
