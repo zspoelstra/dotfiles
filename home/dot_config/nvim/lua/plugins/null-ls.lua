@@ -7,6 +7,7 @@ return {
       local nls = require("null-ls")
       return {
         sources = {
+          nls.builtins.formatting.prettier,
           nls.builtins.formatting.stylua,
         },
       }
