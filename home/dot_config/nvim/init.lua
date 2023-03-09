@@ -1,37 +1,10 @@
--- print(vim.inspect(opts))
+require("config.options")
+require("config.lazy")
 
--- Use <space> as the leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Lazy.nvim package manager
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup("plugins", {
-  checker = { enabled = true },
-  defaults = {
-    lazy = true,
-  },
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "netrwPlugin",
-      },
-    },
-  },
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    require("config.autocmds")
+    require("config.keymaps")
+  end,
 })
-
-require("options")
-require("keymaps")
-require("autocmds")

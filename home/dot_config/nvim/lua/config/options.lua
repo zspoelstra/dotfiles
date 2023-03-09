@@ -1,3 +1,8 @@
+-- Leader and local leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Options
 vim.opt.autowrite = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 0
