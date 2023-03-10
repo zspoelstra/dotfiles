@@ -1,9 +1,10 @@
---
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-
 -- better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
+-- recenter on page down/up
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up" })
 
 -- quit
 vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
