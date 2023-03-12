@@ -4,22 +4,21 @@ return {
     cmd = "Neotree",
     keys = {
       {
-        "<leader>fe",
-        function()
-          require("neo-tree.command").execute({ toggle = true })
-        end,
-        desc = "Explorer NeoTree",
+        "<leader>ee",
+        "<cmd>Neotree toggle<cr>",
+        desc = "Explorer",
       },
-      { "<leader>e", "<leader>fe", desc = "Explorer", remap = true },
+      {
+        "<leader>er",
+        "<cmd>Neotree reveal<cr>",
+        desc = "Reveal File",
+      },
     },
     opts = {
       close_if_last_window = true,
       default_component_configs = {
         indent = {
           with_expanders = true,
-          expander_collapsed = "",
-          expander_expanded = "",
-          expander_highlight = "NeoTreeExpander",
         },
       },
       window = {
