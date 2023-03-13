@@ -20,18 +20,17 @@ return {
       },
     },
     keys = {
-      {
-        "<leader>/",
-        function()
-          require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-            winblend = 10,
-            previewer = false,
-          }))
-        end,
-      },
+      -- {
+      --   "<leader>/",
+      --   function()
+      --     require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+      --       winblend = 10,
+      --       previewer = false,
+      --     }))
+      --   end,
+      -- },
 
       -- Find
-      { "<leader><space>", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
@@ -44,8 +43,6 @@ return {
       defaults = {
         file_ignore_pattern = { ".git/", "coverage", "node_modules" },
         path_display = { "truncate" },
-        prompt_prefix = " ",
-        selection_caret = " ",
         mappings = {
           i = {
             ["<C-j>"] = function(...)
