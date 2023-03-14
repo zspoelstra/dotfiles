@@ -20,24 +20,21 @@ return {
       },
     },
     keys = {
-      -- {
-      --   "<leader>/",
-      --   function()
-      --     require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-      --       winblend = 10,
-      --       previewer = false,
-      --     }))
-      --   end,
-      -- },
-
-      -- Find
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+      {
+        "<leader>/",
+        function()
+          require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+            previewer = false,
+          }))
+        end,
+        desc = "Fuzzy Search Buffer",
+      },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Files" },
+      { "<leader>fg", "<cmd>Telescope live_grep_args<cr>", desc = "Grep" },
+      { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-
-      -- Search
-      { "<leader>sg", "<cmd>Telescope live_grep_args<cr>", desc = "Grep" },
-      { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Grep Word" },
+      { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "Word" },
     },
     opts = {
       defaults = {

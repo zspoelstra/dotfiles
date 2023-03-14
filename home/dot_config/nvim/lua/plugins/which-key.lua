@@ -13,7 +13,7 @@ return {
         ["<leader>b"] = { name = "+buffer" },
         ["<leader>c"] = { name = "+code" },
         ["<leader>e"] = { name = "+explorer" },
-        ["<leader>f"] = { name = "+file/find" },
+        ["<leader>f"] = { name = "+find" },
         ["<leader>g"] = { name = "+goto" },
         ["<leader>q"] = { name = "+quit/session" },
       }
