@@ -1,5 +1,19 @@
 return {
   {
+    "jose-elias-alvarez/null-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      table.insert(
+        opts.sources,
+        nls.builtins.diagnostics.rubocop.with({
+          command = "bundle",
+          args = vim.list_extend({ "exec", "rubocop" }, nls.builtins.diagnostics.rubocop._opts.args),
+        })
+      )
+    end,
+  },
+
+  {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
