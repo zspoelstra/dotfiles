@@ -12,6 +12,10 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 -- clear search highlight
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
+-- buffers
+vim.keymap.set("n", "<leader>bn", ":bn<cr>", { desc = "Buffer Next" })
+vim.keymap.set("n", "<leader>bp", ":bp<cr>", { desc = "Buffer Previous" })
+
 -- move to window using the <ctrl> hjkl keys
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })

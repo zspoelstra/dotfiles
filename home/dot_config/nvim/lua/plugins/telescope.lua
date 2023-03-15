@@ -20,6 +20,10 @@ return {
       },
     },
     keys = {
+      -- buffers
+      { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "List" },
+
+      -- search
       {
         "<leader>/",
         function()
@@ -29,11 +33,12 @@ return {
         end,
         desc = "Fuzzy Search Buffer",
       },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+
+      -- find
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Files" },
       { "<leader>fg", "<cmd>Telescope live_grep_args<cr>", desc = "Grep" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
-      { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+      { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
       { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "Word" },
     },
     opts = {
