@@ -35,6 +35,7 @@ require("lazy").setup({
   { import = "plugins" },
   { import = "plugins.formatting.prettier" },
   { import = "plugins.language.lua" },
+  { import = "plugins.language.markdown" },
   { import = "plugins.language.ruby" },
   { import = "plugins.language.typescript" },
 }, opts)
