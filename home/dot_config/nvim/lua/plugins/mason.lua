@@ -5,6 +5,13 @@ return {
     keys = {
       { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" },
     },
+    opts = {
+      ensure_installed = {
+        "marksman",
+        "solargraph",
+        "stylua",
+      },
+    },
     config = function(_, opts)
       require("mason").setup(opts)
       local registry = require("mason-registry")

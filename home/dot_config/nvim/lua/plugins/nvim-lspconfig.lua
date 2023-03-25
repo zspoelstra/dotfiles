@@ -7,6 +7,25 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },
+    opts = {
+      servers = {
+        lua_ls = {
+          settings = {
+            Lua = {
+              workspace = { checkThirdParty = false },
+              telemetry = { enable = false },
+            },
+          },
+        },
+        marksman = {},
+        solargraph = {},
+      },
+      setup = {
+        solargraph = function(_, opts)
+          opts.init_options = { formatting = false }
+        end,
+      },
+    },
     config = function(_, opts)
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
