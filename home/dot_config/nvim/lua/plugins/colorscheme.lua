@@ -1,15 +1,13 @@
 return {
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "rmehri01/onenord.nvim",
     lazy = false,
-    priority = 1000,
     opts = {
-      dark_variant = "moon",
+      theme = "dark",
     },
     config = function(_, opts)
-      require("rose-pine").setup(opts)
-      vim.cmd("colorscheme rose-pine")
+      require("onenord").setup(opts)
+      vim.cmd("colorscheme onenord")
     end,
   },
 }

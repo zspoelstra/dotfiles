@@ -6,7 +6,7 @@ return {
       options = {
         component_separators = "",
         globalstatus = true,
-        theme = "rose-pine",
+        theme = "onenord",
       },
       sections = {
         lualine_a = { "mode" },
