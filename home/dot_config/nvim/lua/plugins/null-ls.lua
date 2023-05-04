@@ -7,7 +7,7 @@ return {
       local nls = require("null-ls")
       return {
         sources = {
-          nls.builtins.formatting.prettier,
+          nls.builtins.formatting.prettierd,
           nls.builtins.diagnostics.rubocop.with({
             command = "bundle",
             args = vim.list_extend({ "exec", "rubocop" }, nls.builtins.diagnostics.rubocop._opts.args),

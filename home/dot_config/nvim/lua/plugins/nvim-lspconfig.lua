@@ -19,6 +19,7 @@ return {
         },
         marksman = {},
         solargraph = {},
+        tailwindcss = {},
       },
       setup = {
         solargraph = function(_, opts)

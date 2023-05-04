@@ -8,8 +8,10 @@ return {
     opts = {
       ensure_installed = {
         "marksman",
+        "prettierd",
         "solargraph",
         "stylua",
+        "tailwindcss-language-server",
       },
     },
     config = function(_, opts)
