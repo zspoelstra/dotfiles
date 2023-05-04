@@ -17,6 +17,7 @@ return {
           ["<C-u>"] = cmp.mapping.scroll_docs(-4),
           ["<C-d>"] = cmp.mapping.scroll_docs(4),
           ["<C-e"] = cmp.mapping.abort(),
+          ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp_types.ConfirmBehavior.Insert,
             select = false,
@@ -47,6 +48,7 @@ return {
           end,
         },
         sources = {
+          { name = "copilot" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
