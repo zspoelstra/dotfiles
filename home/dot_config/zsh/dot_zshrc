@@ -58,6 +58,7 @@ alias cd..='cd ..'
 alias cp='cp -i'
 alias cz='chezmoi'
 alias la='ls -al'
+alias lazyvim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias ll='ls -l'
 alias ls="lsd --ignore-glob=$'Icon\r'"
 alias lt='ls --tree'
