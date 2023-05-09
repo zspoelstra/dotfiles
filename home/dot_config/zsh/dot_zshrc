@@ -62,6 +62,7 @@ alias lazyvim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias ll='ls -l'
 alias ls="lsd --ignore-glob=$'Icon\r'"
 alias lt='ls --tree'
+alias k='kubectl'
 alias mv='mv -i'
 alias rm='rm -i'
 alias tree='lt'
