@@ -67,8 +67,3 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias tree='lt'
 alias vim='nvim'
-
-# Aliases (work)
-alias utfb-gem-push="gem push --key github --host https://rubygems.pkg.github.com/untappd"
-alias utfb-packages-js="cd ~/Code && cd utfb-packages"
-alias utfb-packages-ruby="cd ~/Code && cd utfb-packages-ruby"
