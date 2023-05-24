@@ -17,6 +17,7 @@ return {
       },
       ensure_installed = {
         "bash",
+        "c",
         "css",
         "dockerfile",
         "help",

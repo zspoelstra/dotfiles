@@ -7,6 +7,7 @@ return {
     },
     opts = {
       ensure_installed = {
+        "clangd",
         "marksman",
         "prettierd",
         "solargraph",
