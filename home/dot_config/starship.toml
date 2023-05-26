@@ -7,5 +7,10 @@ add_newline = false
 # Extend the timeout
 command_timeout = 10000
 
+[directory]
+truncate_to_repo = false
+truncation_symbol = '../'
+
 [kubernetes]
-disabled = false
+disabled = true
+
