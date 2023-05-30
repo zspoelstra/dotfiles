@@ -1,7 +1,3 @@
--- leader and local leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -23,6 +19,13 @@ local opts = {
     border = "rounded",
   },
 }
+
+-- load options
+require("zrs.config.options")
+
+-- load auto commands and keymaps
+require("zrs.config.autocmds")
+require("zrs.config.keymaps")
 
 -- lazy setup
 require("lazy").setup("zrs.plugins", opts)
