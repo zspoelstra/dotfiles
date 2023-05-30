@@ -4,5 +4,6 @@
   "nui.nvim": { "branch": "main", "commit": "2b2732528e4a79eb8542568bd51d25f710395bd6" },
   "nvim-treesitter": { "branch": "master", "commit": "23dfae4db84f71e2ddb56c024845b322035182ee" },
   "nvim-treesitter-endwise": { "branch": "master", "commit": "944b0d85bb6817948eaaf78893cbb23c25641d8f" },
-  "onenord.nvim": { "branch": "main", "commit": "7b2b23e6af16430be3d0364c7ced34522ce88124" }
+  "onenord.nvim": { "branch": "main", "commit": "7b2b23e6af16430be3d0364c7ced34522ce88124" },
+  "persistence.nvim": { "branch": "main", "commit": "4b8051c01f696d8849a5cb8afa9767be8db16e40" }
 }
