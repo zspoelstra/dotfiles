@@ -6,15 +6,19 @@ return {
       require("nvim-treesitter.configs").setup(opts)
     end,
     dependencies = {
-      "RRethy/nvim-treesitter-endwise",
+      { "JoosepAlviste/nvim-ts-context-commentstring" },
+      { "RRethy/nvim-treesitter-endwise" },
     },
     event = { "BufReadPost", "BufNewFile" },
     opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
+      context_commentstring = {
+        enable = true,
+      },
       endwise = {
         enable = true,
       },
+      highlight = { enable = true },
+      indent = { enable = true },
       ensure_installed = {
         "bash",
         "c",
