@@ -17,7 +17,10 @@ return {
       endwise = {
         enable = true,
       },
-      highlight = { enable = true },
+      highlight = {
+        additional_vim_regex_highlighting = false,
+        enable = true,
+      },
       indent = { enable = true },
       ensure_installed = {
         "bash",

@@ -1,21 +1,42 @@
 return {
   {
-    "rmehri01/onenord.nvim",
+    "catppuccin/nvim",
     lazy = false,
+    name = "catppuccin",
     priority = 1000,
-    opts = function()
-      local colors = require("onenord.colors").load()
-      return {
-        custom_highlights = {
-          ["TelescopeSelection"] = { fg = colors.dark_blue, style = "bold" },
-          ["TelescopeSelectionCaret"] = { fg = colors.dark_blue, style = "bold" },
+    opts = {
+      flavour = "frappe",
+      integrations = {
+        cmp = true,
+        leap = true,
+        markdown = true,
+        mason = true,
+        mini = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "underline" },
+            hints = { "underline" },
+            warnings = { "underline" },
+            information = { "underline" },
+          },
+          virtual_text = {
+            errors = { "italic" },
+            hints = { "italic" },
+            warnings = { "italic" },
+            information = { "italic" },
+          },
         },
-        theme = "dark",
-      }
-    end,
+        neotree = true,
+        noice = true,
+        telescope = true,
+        treesitter = true,
+        which_key = true,
+      },
+    },
     config = function(_, opts)
-      require("onenord").setup(opts)
-      vim.cmd("colorscheme onenord")
+      require("catppuccin").setup(opts)
+      vim.cmd("colorscheme catppuccin")
     end,
   },
 }
