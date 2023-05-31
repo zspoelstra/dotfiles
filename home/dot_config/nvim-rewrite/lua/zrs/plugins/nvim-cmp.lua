@@ -2,7 +2,9 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
+      { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
       { "L3MON4D3/LuaSnip" },
       { "saadparwaiz1/cmp_luasnip" },
     },
@@ -12,6 +14,17 @@ return {
       local luasnip = require("luasnip")
 
       return {
+        formatting = {
+          format = function(entry, vim_item)
+            vim_item.menu = ({
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              luasnip = "[LuaSnip]",
+              nvim_lua = "[Lua]",
+            })[entry.source.name]
+            return vim_item
+          end,
+        },
         mapping = {
           ["<C-e>"] = cmp.mapping.abort(),
           ["<C-Space>"] = cmp.mapping.complete(),
@@ -45,8 +58,10 @@ return {
           end,
         },
         sources = {
+          { name = "buffer" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
+          { name = "nvim_lua" },
         },
       }
     end,
