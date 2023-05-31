@@ -11,11 +11,13 @@ return {
     opts = function()
       local cmp = require("cmp")
       local cmp_types = require("cmp.types.cmp")
+      local kind_icons = require("zrs.config.icons").kinds
       local luasnip = require("luasnip")
 
       return {
         formatting = {
           format = function(entry, vim_item)
+            vim_item.kind = string.format("%s%s", kind_icons[vim_item.kind], vim_item.kind)
             vim_item.menu = ({
               buffer = "[Buffer]",
               nvim_lsp = "[LSP]",
