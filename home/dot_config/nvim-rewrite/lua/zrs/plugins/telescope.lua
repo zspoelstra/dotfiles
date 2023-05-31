@@ -26,8 +26,9 @@ return {
       defaults = {
         file_ignore_pattern = { ".git/", "coverage", "node_modules" },
         path_display = { "truncate" },
+        selection_caret = "❯ ",
       },
     },
-    version = "*",
+    version = false,
   },
 }
