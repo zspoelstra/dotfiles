@@ -2,6 +2,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function(_, opts)
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local buffer = args.buf
@@ -25,7 +28,10 @@ return {
       })
 
       local function setup(server_name)
-        local server_opts = opts.servers[server_name] or {}
+        local server_opts = vim.tbl_deep_extend("force", {
+          capabilities = vim.deepcopy(capabilities),
+        }, opts.servers[server_name] or {})
+
         require("lspconfig")[server_name].setup(server_opts)
       end
 
