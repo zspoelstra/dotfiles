@@ -3,6 +3,8 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "prettierd",
+        "rubocop",
         "stylua",
       },
     },
