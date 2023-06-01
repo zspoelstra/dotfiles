@@ -16,7 +16,8 @@ return {
       end
     end,
     keys = {
-      { "<leader>ee", "<cmd>Neotree toggle<cr>", desc = "Explorer" },
+      { "<leader>ee", "<cmd>Neotree toggle<cr>", desc = "Toggle" },
+      { "<leader>ef", "<cmd>Neotree focus<cr>", desc = "Focus" },
       { "<leader>er", "<cmd>Neotree reveal<cr>", desc = "Reveal File" },
     },
     opts = {
