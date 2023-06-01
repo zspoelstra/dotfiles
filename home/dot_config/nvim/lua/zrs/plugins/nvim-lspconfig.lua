@@ -32,6 +32,12 @@ return {
           capabilities = vim.deepcopy(capabilities),
         }, opts.servers[server_name] or {})
 
+        if opts.setup[server_name] then
+          if opts.setup[server_name](server_name, server_opts) then
+            return
+          end
+        end
+
         require("lspconfig")[server_name].setup(server_opts)
       end
 
@@ -40,6 +46,7 @@ return {
     end,
     dependencies = {
       { "folke/neodev.nvim", config = true },
+      { "jose-elias-alvarez/typescript.nvim" },
       { "williamboman/mason.nvim" },
       { "williamboman/mason-lspconfig.nvim" },
     },
@@ -54,6 +61,19 @@ return {
             },
           },
         },
+        tsserver = {
+          settings = {
+            completions = {
+              completeFunctionCalls = true,
+            },
+          },
+        },
+      },
+      setup = {
+        tsserver = function(_, opts)
+          require("typescript").setup({ server = opts })
+          return true
+        end,
       },
     },
   },

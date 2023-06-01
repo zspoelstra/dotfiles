@@ -16,6 +16,7 @@ return {
           }),
           null_ls.builtins.formatting.prettierd,
           null_ls.builtins.formatting.stylua,
+          require("typescript.extensions.null-ls.code-actions"),
         },
       }
     end,

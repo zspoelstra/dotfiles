@@ -6,6 +6,7 @@ return {
         "prettierd",
         "rubocop",
         "stylua",
+        "typescript-language-server",
       },
     },
     config = function(_, opts)
