@@ -61,6 +61,7 @@ return {
             },
           },
         },
+        solargraph = {},
         tsserver = {
           settings = {
             completions = {
@@ -70,6 +71,9 @@ return {
         },
       },
       setup = {
+        solargraph = function(_, opts)
+          opts.init_options = { formatting = false }
+        end,
         tsserver = function(_, opts)
           require("typescript").setup({ server = opts })
           return true

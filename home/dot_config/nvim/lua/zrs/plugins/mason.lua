@@ -5,6 +5,7 @@ return {
       ensure_installed = {
         "prettierd",
         "rubocop",
+        "solargraph",
         "stylua",
         "typescript-language-server",
       },
