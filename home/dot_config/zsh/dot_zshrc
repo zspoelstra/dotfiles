@@ -41,6 +41,9 @@ then
   export PATH="$(yarn global bin):$PATH"
 fi
 
+# Docker
+export PATH="$HOME/.docker/bin:$PATH"
+
 # Ripgrep
 export RIPGREP_CONFIG_PATH="/Users/zspoelstra/.config/ripgrep/config"
 
