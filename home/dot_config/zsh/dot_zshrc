@@ -28,6 +28,7 @@ compinit
 eval "$(op completion zsh)"; compdef _op op
 
 # Starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # asdf
