@@ -17,11 +17,6 @@ return {
       endwise = {
         enable = true,
       },
-      highlight = {
-        additional_vim_regex_highlighting = false,
-        enable = true,
-      },
-      indent = { enable = true },
       ensure_installed = {
         "bash",
         "c",
@@ -33,6 +28,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
+        "query",
         "regex",
         "ruby",
         "scss",
@@ -42,6 +38,11 @@ return {
         "vimdoc",
         "yaml",
       },
+      highlight = {
+        additional_vim_regex_highlighting = false,
+        enable = true,
+      },
+      indent = { enable = true },
     },
     version = false,
   },
