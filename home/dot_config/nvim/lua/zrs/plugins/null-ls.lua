@@ -10,6 +10,7 @@ return {
       local null_ls = require("null-ls")
       return {
         sources = {
+          null_ls.builtins.diagnostics.eslint_d,
           null_ls.builtins.diagnostics.rubocop.with({
             command = "bundle",
             args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.diagnostics.rubocop._opts.args),
