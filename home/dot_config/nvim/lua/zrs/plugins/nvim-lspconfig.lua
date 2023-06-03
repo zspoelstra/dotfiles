@@ -14,6 +14,14 @@ return {
     },
     event = { "BufNewFile", "BufReadPre" },
     opts = {
+      capabilities = {
+        textDocument = {
+          foldingRange = {
+            dynamicRegistration = true,
+            lineFoldingOnly = true,
+          },
+        },
+      },
       servers = {
         lua_ls = {
           settings = {
