@@ -3,8 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     config = function(_, opts)
       require("zrs.lsp").on_attach()
+      require("zrs.lsp.format").setup()
       require("mason-lspconfig").setup({ ensure_installed = vim.tbl_keys(opts.servers) })
-      require("mason-lspconfig").setup_handlers({ require("zrs.lsp").setup(opts) })
+      require("mason-lspconfig").setup_handlers({ require("zrs.lsp").setup_handlers(opts) })
     end,
     dependencies = {
       { "folke/neodev.nvim", config = true },

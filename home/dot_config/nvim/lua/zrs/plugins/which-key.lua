@@ -7,6 +7,7 @@ return {
       wk.register({
         mode = { "n", "v" },
         ["<leader>b"] = { name = "+buffer" },
+        ["<leader>c"] = { name = "+code" },
         ["<leader>e"] = { name = "+explorer" },
         ["<leader>f"] = { name = "+find" },
         ["<leader>q"] = { name = "+quit/session" },

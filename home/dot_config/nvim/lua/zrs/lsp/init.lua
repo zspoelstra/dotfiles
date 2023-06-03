@@ -3,29 +3,15 @@ local M = {}
 function M.on_attach()
   vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
-      local buffer = args.buf
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-      if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          group = vim.api.nvim_create_augroup("LspFormat." .. buffer, {}),
-          buffer = buffer,
-          callback = function()
-            vim.lsp.buf.format({
-              bufnr = buffer,
-              filter = function(cl)
-                return cl.name == "null-ls"
-              end,
-            })
-          end,
-        })
-      end
+      require("zrs.lsp.keymaps").setup(args.buf)
     end,
   })
 end
 
-function M.setup(opts)
+function M.setup_handlers(opts)
   return function(server_name)
+    -- Merge client capabilities, cmp_nvim_lsp default capabilities,
+    -- and any capabilities defined in opts
     local capabilities = vim.tbl_deep_extend(
       "force",
       vim.lsp.protocol.make_client_capabilities(),
@@ -33,16 +19,23 @@ function M.setup(opts)
       opts.capabilities or {}
     )
 
+    -- Create the options table we will sent do the lsp server.
+    -- This combines the above capabilities with any defined in the
+    -- plugin opts table
     local server_opts = vim.tbl_deep_extend("force", {
       capabilities = vim.deepcopy(capabilities),
     }, opts.servers[server_name] or {})
 
+    -- If any custom setup functions were defined, run them. Setup
+    -- functions should take care of setting up the lsp server and
+    -- return true.
     if opts.setup[server_name] then
       if opts.setup[server_name](server_name, server_opts) then
         return
       end
     end
 
+    -- Finally, setup the server
     require("lspconfig")[server_name].setup(server_opts)
   end
 end
