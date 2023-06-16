@@ -32,7 +32,6 @@ return {
             },
           },
         },
-        solargraph = {},
         tsserver = {
           settings = {
             completions = {
