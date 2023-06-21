@@ -19,7 +19,8 @@ return {
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Files" },
       { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Grep" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
-      { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
+      { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Recent Files" },
+      { "<leader>fr", "<cmd>Telescope resume<cr>", desc = "Resume" },
       { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "Word" },
     },
     opts = {
