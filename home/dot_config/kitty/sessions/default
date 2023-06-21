@@ -1,0 +1,9 @@
+layout vertical
+os_window_state fullscreen
+
+launch --title "Console"
+
+launch
+resize_window shorter 6
+
+new_tab Neovim
