@@ -1,5 +1,4 @@
 layout vertical
-os_window_state fullscreen
 
 launch --title "Console"
 
