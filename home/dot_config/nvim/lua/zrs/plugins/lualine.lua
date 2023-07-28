@@ -5,7 +5,7 @@ return {
       extensions = { "neo-tree" },
       options = {
         component_separators = "",
-        theme = "catppuccin",
+        theme = "rose-pine",
       },
       sections = {
         lualine_a = { "mode" },
