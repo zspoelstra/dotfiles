@@ -12,5 +12,5 @@ truncate_to_repo = false
 truncation_symbol = '../'
 
 [kubernetes]
-disabled = true
+disabled = false
 
