@@ -1,8 +1,6 @@
 {{- $email := promptString "email" -}}
 {{- $name := promptString "name" -}}
-{{- $work := promptBool "work computer" -}}
 
 [data]
   email = {{ $email | quote }}
   name = {{ $name | quote }}
-  work = {{ $work }}
