@@ -1,7 +1,7 @@
 # Homebrew
-export HOMEBREW_NO_ENV_HINTS=1
 if type brew &>/dev/null
 then
+  export HOMEBREW_NO_ENV_HINTS=1
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
