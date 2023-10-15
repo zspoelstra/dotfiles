@@ -5,4 +5,4 @@ export EDITOR='nvim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:~/.local/bin:$PATH
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
