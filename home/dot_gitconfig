@@ -1,6 +1,6 @@
 [user]
-	name = {{ quote .name }}
-	email = {{ quote .email }}
+	name = "Zach Spoelstra"
+	email = "zspoelstra@gmail.com"
 
 [alias]
   cm = commit
