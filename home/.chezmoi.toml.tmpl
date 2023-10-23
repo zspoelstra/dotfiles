@@ -1,6 +1,4 @@
-{{- $email := promptString "email" -}}
-{{- $name := promptString "name" -}}
+{{- $personal_device := promptBool "Are you setting up a personal device" -}}
 
 [data]
-  email = {{ $email | quote }}
-  name = {{ $name | quote }}
+  personal_device = {{ $personal_device }}
