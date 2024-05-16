@@ -3,9 +3,11 @@
 
 {{- if eq $environment "personal" }}
   {{- $isPersonalComputer := true }}
+  {{- $isWorkComputer := false }}
 {{- end }}
 
 {{- if eq $environment "work" }}
+  {{- $isPersonalComputer := false }}
   {{- $isWorkComputer := true }}
 {{- end }}
 
