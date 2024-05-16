@@ -11,3 +11,7 @@ command_timeout = 10000
 truncate_to_repo = false
 truncation_symbol = '../'
 
+{{- if .isWorkComputer }}
+[kubernetes]
+disabled = false
+{{- end }}
