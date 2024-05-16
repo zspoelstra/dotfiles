@@ -1,16 +1,20 @@
-{{- $environmentChoices := list "personal" "work" }}
-{{- $environment := promptChoiceOnce . "environment" "Which environment is this?" $environmentChoices }}
+{{- $isPersonalComputer := false -}}
+{{- $isWorkComputer := false -}}
 
-{{- if eq $environment "personal" }}
-  {{- $isPersonalComputer := true }}
-  {{- $isWorkComputer := false }}
-{{- end }}
+{{- $environmentChoices := list "personal" "work" -}}
+{{- $environment := promptChoiceOnce . "environment" "Which environment is this?" $environmentChoices -}}
 
-{{- if eq $environment "work" }}
-  {{- $isPersonalComputer := false }}
-  {{- $isWorkComputer := true }}
-{{- end }}
+{{- if eq $environment "personal" -}}
+{{-   $isPersonalComputer = true -}}
+{{-   $isWorkComputer = false -}}
+{{- end -}}
+
+{{- if eq $environment "work" -}}
+{{-   $isPersonalComputer = false -}}
+{{-   $isWorkComputer = true -}}
+{{- end -}}
 
 [data]
+  environment = {{ quote $environment }}
   isPersonalComputer = {{ $isPersonalComputer }}
   isWorkComputer = {{ $isWorkComputer }}
