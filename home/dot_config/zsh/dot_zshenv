@@ -1,3 +1,9 @@
+# Determine own path if ZDOTDIR isn't set or home symlink exists
+if [[ -z "${ZDOTDIR}" || -L "${HOME}/.zshenv" ]]; then
+  local homezshenv="${HOME}/.zshenv"
+  ZDOTDIR="${homezshenv:A:h}"
+fi
+
 # Disable Apple shell sessions
 SHELL_SESSIONS_DISABLE=1
 
@@ -13,4 +19,3 @@ if type brew &> /dev/null
 then
   eval "$(brew shellenv)"
 fi
-
