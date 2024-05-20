@@ -4,18 +4,11 @@ if [[ -z "${ZDOTDIR}" || -L "${HOME}/.zshenv" ]]; then
   ZDOTDIR="${homezshenv:A:h}"
 fi
 
-# Disable Apple shell sessions
-SHELL_SESSIONS_DISABLE=1
+# ignore /etc/zprofile, /etc/zshrc, /etc/zlogin, and /etc/zlogout
+unsetopt GLOBAL_RCS
 
-export EDITOR='nvim'
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-
-export PATH=$HOME/.local/bin:$PATH
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-
-if type brew &> /dev/null
-then
-  eval "$(brew shellenv)"
-fi
+# Source local env.d files
+for envfile in ${ZDOTDIR}/env.d/*; do
+  source "${envfile}"
+done
+unset envfile

@@ -1,0 +1,4 @@
+# source all configs in rc.d
+for config in "${ZDOTDIR}"/rc.d/*; do
+  source "${config}"
+done
