@@ -1,3 +1,7 @@
-if [[ -d "${SDKMAN_DIR}" ]] && [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]]; then
-  source "${SDKMAN_DIR}/bin/sdkman-init.sh"
-fi
+() {
+  local sdkman_dir="${HOME}/.sdkman"
+  if [[ -d "${sdkman_dir}" ]] && [[ -s "${sdkman_dir}/bin/sdkman-init.sh" ]]; then
+    export SDKMAN_DIR="${sdkman_dir}"
+    source "${sdkman_dir}/bin/sdkman-init.sh"
+  fi
+}
