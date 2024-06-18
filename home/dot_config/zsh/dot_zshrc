@@ -33,8 +33,26 @@ alias tree="lt"
 alias wget="wget --hsts-file=\"${XDG_DATA_HOME}/wget-hsts\""
 alias vim="nvim"
 
+# +-----------------+
+# | local functions |
+# +-----------------+
+
+if [ -d $ZDOTDIR/functions ]
+then
+  fpath=($ZDOTDIR/functions $fpath)
+  autoload -Uz $ZDOTDIR/functions/*(:t)
+fi
+
+# +------------------+
+# | brew completions |
+# +------------------+
+
+if (( ${+commands[brew]} )); then
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fi
+
 # +-------------+
-# | Completions |
+# | completions |
 # +-------------+
 
 autoload -Uz compinit
