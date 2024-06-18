@@ -29,6 +29,9 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
+# less
+export LESS="-FRX"
+
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=1
 
