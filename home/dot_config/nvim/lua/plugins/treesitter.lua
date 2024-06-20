@@ -5,7 +5,7 @@ local M = {
     require("nvim-treesitter.configs").setup(opts)
   end,
   opts = {
-    ensure_installed = { "lua", "luadoc", "vim", "vimdoc" },
+    ensure_installed = { "bash", "lua", "luadoc", "markdown", "markdown_inline", "regex", "vim", "vimdoc" },
     highlight = {
       additional_vim_regex_highlighting = { "ruby" },
       enable = true

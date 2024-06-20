@@ -6,7 +6,11 @@ local M = {
   end,
   name = "catppuccin",
   opts = {
-    flavour = "mocha"
+    flavour = "mocha",
+    integrations = {
+      noice = true,
+      which_key = true
+    }
   },
   priority = 1000,
 }
