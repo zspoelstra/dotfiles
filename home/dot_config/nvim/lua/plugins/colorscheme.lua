@@ -1,14 +1,14 @@
 local M = {
-  "rose-pine/neovim",
-  name = "rose-pine",
-  priority = 1000,
-  opts = {
-    dark_variant = "moon"
-  },
+  "catppuccin/nvim",
   config = function(_, opts)
-    require("rose-pine").setup(opts)
-    vim.cmd("colorscheme rose-pine")
-  end
+    require("catppuccin").setup(opts)
+    vim.cmd("colorscheme catppuccin")
+  end,
+  name = "catppuccin",
+  opts = {
+    flavour = "mocha"
+  },
+  priority = 1000,
 }
 
 return { M }

@@ -24,6 +24,9 @@ vim.opt.wrap = false                -- do not wrap lines
 -- quit using qq
 vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
+--
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Write file" })
+
 -- clear search highlight on esc
 vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 
