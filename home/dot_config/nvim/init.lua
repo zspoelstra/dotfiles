@@ -44,6 +44,23 @@ vim.keymap.set("n", "<Right>", "")
 vim.keymap.set("n", "<Up>", "")
 vim.keymap.set("n", "<Down>", "")
 
+-- update kitty padding dynamically
+vim.api.nvim_create_autocmd('VimEnter', {
+  desc = "Remove Kitty padding when entering",
+  group = vim.api.nvim_create_augroup("zrs_remove_kitty_padding", { clear = true }),
+  callback = function()
+    os.execute("kitty @ --to=$KITTY_LISTEN_ON set-spacing padding=0")
+  end
+})
+
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  desc = "Restore Kitty padding when leaving",
+  group = vim.api.nvim_create_augroup("zrs_restore_kitty_padding", { clear = true }),
+  callback = function()
+    os.execute("kitty @ --to=$KITTY_LISTEN_ON set-spacing padding=default")
+  end
+})
+
 -- highlight when yanking text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
