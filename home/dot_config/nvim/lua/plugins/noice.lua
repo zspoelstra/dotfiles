@@ -4,8 +4,8 @@ local M = {
     require("noice").setup(opts)
   end,
   dependencies = {
-    { "MunifTanjim/nui.nvim" }
-  }
+    { "MunifTanjim/nui.nvim" },
+  },
 }
 
 return { M }

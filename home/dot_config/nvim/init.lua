@@ -3,28 +3,28 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- options
-vim.opt.clipboard = 'unnamedplus'   -- sync the clipboard between neovim and the OS
-vim.opt.cursorline = true           -- highlight the line with the cursor
-vim.opt.expandtab = true            -- indenting with <Tab> uses spaces
-vim.opt.ignorecase = true           -- case-insensitive search
-vim.opt.number = true               -- line numbers
-vim.opt.relativenumber = true       -- line numbers are relative to the current line
-vim.opt.scrolloff = 4               -- number of lines to keep visible around the cursor
-vim.opt.shiftwidth = 2              -- indent using 2 spaces
-vim.opt.sidescrolloff = 8           -- number of columns to keep visible around the cursor
-vim.opt.signcolumn = 'yes'          -- alwoys show the sign column
-vim.opt.smartcase = true            -- case-sensitive search if the search term contains capital letters
-vim.opt.splitbelow = true           -- vertical splits go below by default
-vim.opt.splitright = true           -- horizontal splits go to the right by default
-vim.opt.tabstop = 2                 -- number of spaces for a <Tab>
-vim.opt.undofile = true             -- store undo history in a file
-vim.opt.updatetime = 250            -- number of milliseconds of no typing before writing to swap
-vim.opt.wrap = false                -- do not wrap lines
+vim.opt.clipboard = "unnamedplus" -- sync the clipboard between neovim and the OS
+vim.opt.cursorline = true -- highlight the line with the cursor
+vim.opt.expandtab = true -- indenting with <Tab> uses spaces
+vim.opt.ignorecase = true -- case-insensitive search
+vim.opt.number = true -- line numbers
+vim.opt.relativenumber = true -- line numbers are relative to the current line
+vim.opt.scrolloff = 4 -- number of lines to keep visible around the cursor
+vim.opt.shiftwidth = 2 -- indent using 2 spaces
+vim.opt.sidescrolloff = 8 -- number of columns to keep visible around the cursor
+vim.opt.signcolumn = "yes" -- alwoys show the sign column
+vim.opt.smartcase = true -- case-sensitive search if the search term contains capital letters
+vim.opt.splitbelow = true -- vertical splits go below by default
+vim.opt.splitright = true -- horizontal splits go to the right by default
+vim.opt.tabstop = 2 -- number of spaces for a <Tab>
+vim.opt.undofile = true -- store undo history in a file
+vim.opt.updatetime = 250 -- number of milliseconds of no typing before writing to swap
+vim.opt.wrap = false -- do not wrap lines
 
 -- quit using qq
 vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 
---
+-- write
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Write file" })
 
 -- clear search highlight on esc
@@ -45,12 +45,12 @@ vim.keymap.set("n", "<Up>", "")
 vim.keymap.set("n", "<Down>", "")
 
 -- update kitty padding dynamically
-vim.api.nvim_create_autocmd('VimEnter', {
+vim.api.nvim_create_autocmd("VimEnter", {
   desc = "Remove Kitty padding when entering",
   group = vim.api.nvim_create_augroup("zrs_remove_kitty_padding", { clear = true }),
   callback = function()
     os.execute("kitty @ --to=$KITTY_LISTEN_ON set-spacing padding=0")
-  end
+  end,
 })
 
 vim.api.nvim_create_autocmd("VimLeavePre", {
@@ -58,13 +58,13 @@ vim.api.nvim_create_autocmd("VimLeavePre", {
   group = vim.api.nvim_create_augroup("zrs_restore_kitty_padding", { clear = true }),
   callback = function()
     os.execute("kitty @ --to=$KITTY_LISTEN_ON set-spacing padding=default")
-  end
+  end,
 })
 
 -- highlight when yanking text
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('zrs_highlight_yank', { clear = true }),
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking (copying) text",
+  group = vim.api.nvim_create_augroup("zrs_highlight_yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,

@@ -4,14 +4,14 @@ local M = {
     require("which-key").setup(opts)
     require("which-key").register({
       ["<leader>q"] = { name = "[Q]uit" },
-      ["<leader>s"] = { name = "[S]earch" }
+      ["<leader>s"] = { name = "[S]earch" },
     })
   end,
   event = "VimEnter",
   init = function()
     vim.opt.timeout = true
     vim.opt.timeoutlen = 300
-  end
+  end,
 }
 
 return { M }

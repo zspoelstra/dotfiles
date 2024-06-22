@@ -8,13 +8,13 @@ local M = {
     ensure_installed = { "bash", "lua", "luadoc", "markdown", "markdown_inline", "regex", "vim", "vimdoc" },
     highlight = {
       additional_vim_regex_highlighting = { "ruby" },
-      enable = true
+      enable = true,
     },
     indent = {
       disable = { "ruby" },
-      enable = true
-    }
-  }
+      enable = true,
+    },
+  },
 }
 
 return { M }

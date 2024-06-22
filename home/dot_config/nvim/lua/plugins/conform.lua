@@ -4,10 +4,14 @@ local M = {
     require("conform").setup(opts)
   end,
   opts = {
+    format_on_save = {
+      lsp_format = "fallback",
+      timeout_ms = 500,
+    },
     formatters_by_ft = {
-      lua = { "stylua" }
-    }
-  }
+      lua = { "stylua" },
+    },
+  },
 }
 
 return { M }

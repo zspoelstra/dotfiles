@@ -9,8 +9,8 @@ local M = {
     flavour = "mocha",
     integrations = {
       noice = true,
-      which_key = true
-    }
+      which_key = true,
+    },
   },
   priority = 1000,
 }
