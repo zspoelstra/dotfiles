@@ -3,8 +3,8 @@ local M = {
   config = function(_, opts)
     require("which-key").setup(opts)
     require("which-key").register({
+      ["<leader>f"] = { name = "[F]ind" },
       ["<leader>q"] = { name = "[Q]uit" },
-      ["<leader>s"] = { name = "[S]earch" },
     })
   end,
   event = "VimEnter",

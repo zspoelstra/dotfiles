@@ -11,10 +11,9 @@ local M = {
     { "nvim-tree/nvim-web-devicons" },
   },
   keys = {
-    { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "[S]earch [B]uffers" },
-    { "<leader>sf", "<cmd>Telescope find_files<cr>", desc = "[S]earch [F]iles" },
-    { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "[S]earch [H]elp" },
-    { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "[S]earch [W]ord" },
+    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "[F]ind [B]uffers" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[F]ind [F]iles" },
+    { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "[F]ind [W]ord" },
   },
 }
 
