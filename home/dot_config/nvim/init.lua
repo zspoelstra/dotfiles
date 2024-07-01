@@ -22,27 +22,27 @@ vim.opt.updatetime = 250 -- number of milliseconds of no typing before writing t
 vim.opt.wrap = false -- do not wrap lines
 
 -- quit using qq
-vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "quit all" })
 
 -- write
-vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Write file" })
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "write file" })
 
 -- clear search highlight on esc
-vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
+vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "escape and clear hlsearch" })
 
 -- recenter on page down/up
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "page down" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "page up" })
 
 -- recenter the screen when jumping to next occurrence
 vim.keymap.set("n", "n", "nzz", { remap = true })
 vim.keymap.set("n", "N", "Nzz", { remap = true })
 
 -- better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "go to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "go to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "go to upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "go to right window" })
 
 -- disable the arrow keys in normal mode
 vim.keymap.set("n", "<Left>", "")
