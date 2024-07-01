@@ -87,6 +87,20 @@ if (( ${+commands[starship]} )); then
   eval "$(starship init zsh)"
 fi
 
+# +-----+
+# | fzf |
+# +-----+
+if (( ${+commands[fzf]} )); then
+  source <(fzf --zsh)
+fi
+
+# +--------+
+# | zoxide |
+# +--------+
+if (( ${+commands[zoxide]} )); then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
+
 # +-----------------+
 # | zsh-autosuggest |
 # +-----------------+
