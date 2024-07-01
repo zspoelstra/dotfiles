@@ -4,6 +4,9 @@ local M = {
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
   end,
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
   opts = {
     ensure_installed = { "bash", "lua", "luadoc", "markdown", "markdown_inline", "regex", "vim", "vimdoc" },
     highlight = {
@@ -13,6 +16,16 @@ local M = {
     indent = {
       disable = { "ruby" },
       enable = true,
+    },
+    textobjects = {
+      select = {
+        enable = true,
+        lookahead = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+        },
+      },
     },
   },
 }
