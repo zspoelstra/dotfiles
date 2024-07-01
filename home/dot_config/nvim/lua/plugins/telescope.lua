@@ -11,9 +11,18 @@ local M = {
     { "nvim-tree/nvim-web-devicons" },
   },
   keys = {
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "[F]ind [B]uffers" },
-    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[F]ind [F]iles" },
-    { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "[F]ind [W]ord" },
+    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "buffers" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "files" },
+    { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "grep in files" },
+    { "<leader>fr", "<cmd>Telescope resume<cr>", desc = "resume" },
+    { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "old files" },
+    { "<leader>fw", "<cmd>Telescope grep_string<cr>", desc = "grep word" },
+  },
+  opts = {
+    defaults = {
+      file_ignore_pattern = { ".git/", "node_modules" },
+      path_display = { "truncate" },
+    },
   },
 }
 
