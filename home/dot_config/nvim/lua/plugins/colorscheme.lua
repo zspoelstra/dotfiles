@@ -8,6 +8,8 @@ local M = {
   opts = {
     flavour = "mocha",
     integrations = {
+      mason = true,
+      neotree = true,
       noice = true,
       which_key = true,
     },
