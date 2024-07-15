@@ -96,8 +96,3 @@ if [[ -d "${postgres_path}" ]]; then
   path=($postgres_path ${path})
 fi
 unset postgres_path
-
-# yarn
-if (( ${+commands[yarn]} )); then
-  path=($(yarn global bin) ${path})
-fi
