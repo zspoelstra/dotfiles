@@ -1,7 +1,0 @@
----
-BUNDLE_BUILD__PG: "--with-pg-config=/Applications/Postgres.app/Contents/Versions/latest/bin/pg_config"
-{{- if .isWorkComputer }}
-{{ onepasswordRead "op://Shared/u7zktbs67zkplnbxrexk36nrtq/bundler" "untappd.1password.com" }}
-{{ onepasswordRead "op://Shared/Sidekiq Enterprise/bundler" "untappd.1password.com" }}
-BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "zspoelstra:{{ onepasswordRead "op://Personal/Github/token" "my.1password.com" }}"
-{{- end }}
