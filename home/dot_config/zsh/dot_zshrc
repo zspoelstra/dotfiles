@@ -67,6 +67,22 @@ if (( ${+commands[op]} )); then
   compdef _op op
 fi
 
+# +------+
+# | asdf |
+# +------+
+
+if (( ${+commands[asdf]} )); then
+  source "$(brew --prefix asdf)/libexec/asdf.sh"
+fi
+
+# +------+
+# | mise |
+# +------+
+
+if (( ${+commands[mise]} )); then
+  eval "$(mise activate zsh)"
+fi
+
 # +--------+
 # | sdkman |
 # +--------+
