@@ -12,7 +12,16 @@ set -gx XDG_DATA_HOME ~/.local/share
 set -gx XDG_STATE_HOME ~/.local/state
 
 # XDG compliance (see xdg-ninga for more)
-set -gx BUNDLE_USER_CONFIG "$XDG_CONFIG_HOME/bundle/config"
+set -gx AWS_CONFIG_FILE "$XDG_CONFIG_HOME/aws/config"
+set -gx AWS_SHARED_CREDENTIALS_FILE "$XDG_CONFIG_HOME/aws/credentials"
+set -gx BUNDLE_USER_CACHE "$XDG_CACHE_HOME/bundle"
+set -gx BUNDLE_USER_CONFIG "$XDG_CONFIG_HOME/bundle"
+set -gx BUNDLE_USER_PLUGIN "$XDG_DATA_HOME/bundle"
+set -gx CP_HOME_DIR "$XDG_DATA_HOME/cocoapods"
+set -gx DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
+set -gx GEM_HOME "$XDG_DATA_HOME/gem"
+set -gx GEM_SPEC_CACHE "$XDG_CACHE_HOME/gem"
+set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
 set -gx IRBRC "$XDG_CONFIG_HOME/irb/irbrc"
 set -gx LESSHISTFILE "$XDG_STATE_HOME/lesshst"
 set -gx RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
