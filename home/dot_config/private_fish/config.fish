@@ -26,14 +26,8 @@ set -gx IRBRC "$XDG_CONFIG_HOME/irb/irbrc"
 set -gx LESSHISTFILE "$XDG_STATE_HOME/lesshst"
 set -gx RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
 
-# 1Password SSH
-set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-
-# Brew
-if test -x /opt/homebrew/bin/brew
-  set -gx HOMEBREW_NO_ENV_HINTS true
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-end
+# Theme
+fish_config theme choose "Catppuccin Mocha"
 
 # Aliases
 abbr -a bex bundle exec
@@ -45,6 +39,15 @@ abbr -a k kubectl
 abbr -a mv mv -i
 abbr -a rm rm -i
 abbr -a vim nvim
+
+# 1Password SSH
+set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+# Brew
+if test -x /opt/homebrew/bin/brew
+  set -gx HOMEBREW_NO_ENV_HINTS true
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+end
 
 # fzf
 type -q fzf && fzf --fish | source
