@@ -30,4 +30,9 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 0
 
 -- Setup lazy.nvim
-require("lazy").setup("plugins")
+require("lazy").setup({
+  install = {
+    colorscheme = { "catppuccin" }
+  },
+  spec = "plugins"
+})
