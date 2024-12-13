@@ -55,6 +55,9 @@ end
 # fzf
 type -q fzf && fzf --fish | source
 
+# oh-my-posh
+#type -q oh-my-posh && oh-my-posh init fish --config ~/.config/oh-my-posh/config.json | source
+
 # postgres.app
 fish_add_path -a /Applications/Postgres.app/Contents/Versions/latest/bin
 
