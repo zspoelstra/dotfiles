@@ -1,6 +1,9 @@
 # Disable greeting
 set fish_greeting ""
 
+# Bind ctrl+space to accept autosuggestion
+bind -k nul accept-autosuggestion
+
 # Editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
