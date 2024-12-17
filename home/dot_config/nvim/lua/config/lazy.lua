@@ -23,11 +23,16 @@ vim.g.maplocalleader = "\\"
 
 -- Options
 vim.opt.clipboard = "unnamedplus"
+vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 2
+vim.opt.signcolumn = 'yes'
 vim.opt.softtabstop = 0
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.termguicolors = true
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
