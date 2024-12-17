@@ -34,5 +34,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.termguicolors = true
 
+-- Keymaps
+vim.keymap.set("n", "<esc>", ":nohlsearch<cr>")
+
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
