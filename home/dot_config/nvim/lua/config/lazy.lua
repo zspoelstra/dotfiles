@@ -32,7 +32,9 @@ vim.opt.signcolumn = 'yes'
 vim.opt.softtabstop = 0
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.tabstop = 2
 vim.opt.termguicolors = true
+vim.opt.wrap = false
 
 -- Keymaps
 vim.keymap.set("n", "<esc>", ":nohlsearch<cr>")
