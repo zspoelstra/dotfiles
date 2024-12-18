@@ -44,4 +44,8 @@ vim.keymap.set("n", "<leader>q", ":q<cr>")
 vim.keymap.set("n", "<leader>w", ":w<cr>")
 
 -- Setup lazy.nvim
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  change_detection = {
+    notify = false
+  }
+})
