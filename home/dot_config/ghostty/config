@@ -1,3 +1,5 @@
-font-size = 16
+font-size = 18
 theme = catppuccin-mocha  
-
+quit-after-last-window-closed = true
+window-height = 30
+window-width = 120
