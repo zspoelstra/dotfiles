@@ -7,7 +7,7 @@ bind -k nul accept-autosuggestion
 # Editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
- 
+
 # XDG base directory specification
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx XDG_CACHE_HOME ~/.cache
@@ -56,7 +56,7 @@ end
 type -q fzf && fzf --fish | source
 
 # oh-my-posh
-#type -q oh-my-posh && oh-my-posh init fish --config ~/.config/oh-my-posh/config.json | source
+type -q oh-my-posh && oh-my-posh init fish --config ~/.config/oh-my-posh/config.toml | source
 
 # postgres.app
 fish_add_path -a /Applications/Postgres.app/Contents/Versions/latest/bin

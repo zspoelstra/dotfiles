@@ -1,0 +1,24 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+
+final_space = true
+version = 3
+
+[palette]
+text = "#cdd6f4"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "path"
+  foreground = "p:text"
+
+    [blocks.segments.properties]
+    style = "full"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "p:text"
+  template = "❯"
