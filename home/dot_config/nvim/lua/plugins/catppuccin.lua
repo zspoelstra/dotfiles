@@ -9,15 +9,7 @@ return {
     end,
     opts = {
       integrations = {
-        blink_cmp = true,
-        mason = true,
-        native_lsp = {
-          enabled = true,
-        },
         treesitter = true,
-        telescope = {
-          enabled = true,
-        },
       },
     },
   },
