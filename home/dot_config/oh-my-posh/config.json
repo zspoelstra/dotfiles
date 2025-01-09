@@ -40,6 +40,23 @@
           }
         },
         {
+          "type": "git",
+          "style": "plain",
+          "template": "{{ .HEAD }} ",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          }
+        },
+        {
           "type": "text",
           "style": "plain",
           "foreground": "p:text",
