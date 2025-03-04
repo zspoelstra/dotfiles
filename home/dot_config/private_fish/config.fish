@@ -2,7 +2,7 @@
 set fish_greeting ""
 
 # Bind ctrl+space to accept autosuggestion
-bind -k nul accept-autosuggestion
+bind ctrl-space accept-autosuggestion
 
 # Editor
 set -gx EDITOR nvim
