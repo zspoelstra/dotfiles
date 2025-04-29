@@ -1,7 +1,5 @@
 return {
-  {
-    "echasnovski/mini.pairs",
-    opts = {},
-    version = false,
-  },
+  "echasnovski/mini.pairs",
+  opts = {},
+  version = false,
 }
