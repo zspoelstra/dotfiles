@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Disable filetype mappings
+vim.g.no_plugin_maps = true
+
 -- Options
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
