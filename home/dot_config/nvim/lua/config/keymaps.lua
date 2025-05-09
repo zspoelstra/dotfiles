@@ -1,5 +1,5 @@
 -- Clear search highlight on ESC
-vim.keymap.set("n", "<esc>", ":nohlsearch<cr>")
+vim.keymap.set("n", "<esc>", ":nohlsearch<cr>", { silent = true })
 
 -- Quick writing and quitting
 vim.keymap.set("n", "<leader>q", ":q<cr>")
