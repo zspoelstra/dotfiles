@@ -10,5 +10,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Buffer next/prev
+vim.keymap.set("n", "<leader>bd", function()
+  Snacks.bufdelete()
+end)
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
