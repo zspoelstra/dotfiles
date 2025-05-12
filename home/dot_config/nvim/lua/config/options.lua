@@ -20,5 +20,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.tabstop = 2
 vim.opt.termguicolors = true
+vim.opt.undofile = true
 vim.opt.winborder = "single"
 vim.opt.wrap = false
