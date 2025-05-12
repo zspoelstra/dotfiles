@@ -3,10 +3,10 @@ return {
   keys = {
     {
       "<leader>fb",
-      function ()
+      function()
         Snacks.picker.buffers()
       end,
-      desc = "Find Buffer"
+      desc = "Find Buffer",
     },
     {
       "<leader>fc",
