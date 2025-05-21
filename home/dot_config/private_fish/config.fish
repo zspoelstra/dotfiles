@@ -45,7 +45,7 @@ abbr -a vim nvim
 # 1Password SSH
 set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
-# Brew
+# brew
 if test -x /opt/homebrew/bin/brew
   set -gx HOMEBREW_NO_ENV_HINTS true
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -53,6 +53,10 @@ end
 
 # fzf
 type -q fzf && fzf --fish | source
+
+# mise
+set -gx MISE_FISH_AUTO_ACTIVATE 0
+type -q mise && mise activate --shims | source
 
 # oh-my-posh
 type -q oh-my-posh && oh-my-posh init fish --config ~/.config/oh-my-posh/config.json | source
