@@ -19,12 +19,6 @@
           "properties": {
             "always_enabled": true
           }
-        },
-        {
-          "type": "time",
-          "style": "plain",
-          "background": "p:surface0",
-          "template": " \ue641 {{ .CurrentDate | date .Format }}"
         }
       ]
     },
