@@ -1,5 +1,5 @@
 font-size = 18
-theme = catppuccin-macchiato
+theme = catppuccin-macchiato.conf
 quit-after-last-window-closed = true
 window-height = 30
 window-width = 120

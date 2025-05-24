@@ -1,3 +1,10 @@
+[".config/ghostty/themes"]
+  type = "archive"
+  url = "https://github.com/catppuccin/ghostty/archive/refs/heads/main.zip"
+  include = ["*/themes/**"]
+  refreshPeriod = "168h"
+  stripComponents = 2
+
 [".config/tmux/plugins/catppuccin"]
   type = "archive"
   url = "https://github.com/catppuccin/tmux/archive/refs/tags/v2.1.3.tar.gz"
