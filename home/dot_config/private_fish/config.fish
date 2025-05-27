@@ -26,7 +26,7 @@ set -gx LESSHISTFILE "$XDG_STATE_HOME/lesshst"
 set -gx RIPGREP_CONFIG_PATH "$XDG_CONFIG_HOME/ripgrep/config"
 
 # Theme
-fish_config theme choose "Catppuccin Mocha"
+fish_config theme choose "Catppuccin Macchiato"
 
 # Aliases
 abbr -a bex bundle exec
