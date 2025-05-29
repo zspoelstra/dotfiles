@@ -21,6 +21,9 @@ require("config.options")
 -- Keymaps
 require("config.keymaps")
 
+-- Autocommands
+require("config.autocmds")
+
 -- Setup lazy.nvim
 require("lazy").setup("plugins", {
   change_detection = {
