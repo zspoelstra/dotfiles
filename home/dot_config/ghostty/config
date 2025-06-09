@@ -1,4 +1,7 @@
+cursor-style = block
+cursor-style-blink = true
 font-size = 18
+shell-integration-features = no-cursor
 theme = catppuccin-macchiato.conf
 quit-after-last-window-closed = true
 window-height = 30
