@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.pairs",
+  "nvim-mini/mini.pairs",
   opts = {},
   version = false,
 }
