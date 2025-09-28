@@ -1,0 +1,42 @@
+# ZSH home
+export ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
+
+# Locale
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Editor
+export EDITOR=nvim
+export VISUAL=nvim
+
+# XDG base directory specification
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="${HOME}/.config"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="${HOME}/.cache"}
+export XDG_DATA_HOME=${XDG_DATA_HOME:="${HOME}/.local/share"}
+export XDG_STATE_HOME=${XDG_STATE_HOME:="${HOME}/.local/state"}
+
+# XDG compliance (see xdg-ninga for more)
+export AWS_CONFIG_FILE="${XDG_CONFIG_HOME}/aws/config"
+export AWS_SHARED_CREDENTIALS_FILE="${XDG_CONFIG_HOME}/aws/credentials"
+export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
+export BUNDLE_USER_CONFIG="${XDG_CONFIG_HOME}/bundle/config"
+export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
+export CP_HOME_DIR="${XDG_DATA_HOME}/cocoapods"
+export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
+export GEM_SPEC_CACHE="${XDG_CACHE_HOME}/gem"
+export GRADLE_USER_HOME="${XDG_DATA_HOME}/gradle"
+export IRBRC="${XDG_CONFIG_HOME}/irb/irbrc"
+export LESSHISTFILE="${XDG_STATE_HOME}/lesshst"
+export RIPGREP_CONFIG_PATH="${XDG_CONFIG_HOME}/ripgrep/config"
+
+# Disable Apple shell sessions
+export SHELL_SESSIONS_DISABLE=1
+
+# 1Password
+export SSH_AUTH_SOCK="${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# Homebrew
+export HOMEBREW_NO_ENV_HINTS=1
+
+# Less settings
+export LESS="-FRX"
