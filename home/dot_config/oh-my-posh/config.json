@@ -4,8 +4,14 @@
   "final_space": true,
   "palette": {
     "blue": "#89b4fa",
+    "overlay0": "#6e738d",
     "surface0": "#313244",
     "text": "#cdd6f4"
+  },
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "p:overlay0",
+    "template": "{{ .Segments.Path.Text }}{{ .Segments.Text.Text }} "
   },
   "blocks": [
     {
