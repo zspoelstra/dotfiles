@@ -11,7 +11,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:overlay0",
-    "template": "{{ .Segments.Path.Text }}{{ .Segments.Text.Text }} "
+    "template": "{{ .Segments.Text.Text }} "
   },
   "blocks": [
     {
@@ -36,8 +36,10 @@
           "type": "path",
           "foreground": "p:blue",
           "properties": {
-            "style": "agnoster"
-          }
+            "max_depth": 5,
+            "style": "agnoster_short"
+          },
+          "template": "\uf07c  {{ .Path }}"
         },
         {
           "type": "git",
@@ -55,12 +57,19 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           }
-        },
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "type": "prompt",
+      "segments": [
         {
           "type": "text",
           "style": "plain",
           "foreground": "p:text",
-          "template": "\u276f"
+          "template": "\udb81\ude0d "
         }
       ]
     }
