@@ -11,7 +11,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:overlay0",
-    "template": "{{ .Segments.Text.Text }} "
+    "template": "{{ .Segments.Text.Text }}"
   },
   "blocks": [
     {
@@ -21,7 +21,7 @@
           "type": "executiontime",
           "style": "plain",
           "background": "p:surface0",
-          "template": " \ueba2 {{ .FormattedMs }}",
+          "template": " \ueba2 {{ .FormattedMs }} ",
           "properties": {
             "always_enabled": true
           }
@@ -39,7 +39,7 @@
             "max_depth": 5,
             "style": "agnoster_short"
           },
-          "template": "\uf07c  {{ .Path }}"
+          "template": "\uf07c  {{ .Path }} "
         },
         {
           "type": "git",
