@@ -19,7 +19,7 @@
 )
 
 (defalias
-  escctrl (tap-hold 200 200 esc lctl)
+  escctrl (tap-hold-press 200 200 esc lctl)
 )
 
 (deflayer base
