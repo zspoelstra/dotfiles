@@ -10,5 +10,10 @@ return {
       desc = "Buffer local keymaps (which-key)",
     },
   },
-  opts = {},
+  opts = {
+    spec = {
+      { "<leader>b", group = "Buffers" },
+      { "<leader>f", group = "Find" },
+    },
+  },
 }
