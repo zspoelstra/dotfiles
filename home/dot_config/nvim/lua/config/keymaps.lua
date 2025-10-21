@@ -2,8 +2,8 @@
 vim.keymap.set("n", "<esc>", ":nohlsearch<cr>", { silent = true })
 
 -- Quick writing and quitting
-vim.keymap.set("n", "<leader>q", ":q<cr>")
-vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>q", ":q<cr>", { desc = "Quit" })
+vim.keymap.set("n", "<leader>w", ":w<cr>", { desc = "Save" })
 
 -- Center the screen when paging up/down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -12,9 +12,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Buffer next/prev
 vim.keymap.set("n", "<leader>bd", function()
   Snacks.bufdelete()
-end)
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>")
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>")
+end, { desc = "Delete Buffer" })
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 -- Easy window navigation
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Focus left window" })
