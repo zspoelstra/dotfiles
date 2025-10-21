@@ -9,7 +9,7 @@ return {
       typescript = { "prettier" },
       typescriptreact = { "prettier" },
     },
-    format_on_save = {
+    format_after_save = {
       lsp_format = "fallback",
       timeout_ms = 500,
     },
