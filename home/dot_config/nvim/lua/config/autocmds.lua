@@ -13,8 +13,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
-  desc = "",
-  group = augroup("lsp"),
+  group = augroup("lsp.setup"),
   callback = function(args)
     local bufnr = args.buf
 
@@ -32,5 +31,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "grr", function()
       Snacks.picker.lsp_references()
     end, { buffer = bufnr, desc = "Show LSP References", silent = true })
+  end,
+})
+
+-- "Fix" Ruby indenting on "."
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("ruby.dot.indent"),
+  pattern = { "ruby" },
+  callback = function()
+    vim.opt_local.indentkeys:remove(".")
   end,
 })
