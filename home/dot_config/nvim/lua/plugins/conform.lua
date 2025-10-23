@@ -6,6 +6,7 @@ return {
       javascript = { "prettier" },
       javascriptreact = { "prettier" },
       lua = { "stylua" },
+      ruby = { "standardrb" },
       typescript = { "prettier" },
       typescriptreact = { "prettier" },
     },
