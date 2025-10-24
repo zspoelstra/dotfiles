@@ -6,21 +6,21 @@ return {
       function()
         Snacks.picker.buffers()
       end,
-      desc = "Find Buffer",
+      desc = "Buffers",
     },
     {
       "<leader>fc",
       function()
         Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
       end,
-      desc = "Find Config File",
+      desc = "Config Files",
     },
     {
       "<leader>ff",
       function()
         Snacks.picker.files()
       end,
-      desc = "Find files",
+      desc = "Files",
     },
     {
       "<leader>fg",
@@ -34,14 +34,21 @@ return {
       function()
         Snacks.picker.projects()
       end,
-      desc = "Find Projects",
+      desc = "Projects",
     },
     {
       "<leader>fr",
       function()
         Snacks.picker.recent()
       end,
-      desc = "Find Recent",
+      desc = "Recent Files",
+    },
+    {
+      "<leader>fR",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "Resume",
     },
   },
   lazy = false,
