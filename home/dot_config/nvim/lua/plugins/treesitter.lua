@@ -38,9 +38,20 @@ return {
       indent = {
         enable = true,
       },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = { query = "@function.outer", desc = "Select outer part of method/function" },
+            ["if"] = { query = "@function.inner", desc = "Select inner part of method/function" },
+          },
+        },
+      },
     })
   end,
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    "RRethy/nvim-treesitter-endwise",
   },
 }
