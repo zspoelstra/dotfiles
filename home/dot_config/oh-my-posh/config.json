@@ -1,7 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 3,
-  "final_space": true,
   "palette": {
     "blue": "#89b4fa",
     "overlay0": "#6e738d",
@@ -9,22 +7,22 @@
     "text": "#cdd6f4"
   },
   "transient_prompt": {
-    "background": "transparent",
+    "template": "{{ .Segments.Text.Text }}",
     "foreground": "p:overlay0",
-    "template": "{{ .Segments.Text.Text }}"
+    "background": "transparent"
   },
   "blocks": [
     {
       "type": "rprompt",
       "segments": [
         {
-          "type": "executiontime",
-          "style": "plain",
-          "background": "p:surface0",
-          "template": " \ueba2 {{ .FormattedMs }} ",
-          "properties": {
+          "options": {
             "always_enabled": true
-          }
+          },
+          "template": " \ueba2 {{ .FormattedMs }} ",
+          "background": "p:surface0",
+          "type": "executiontime",
+          "style": "plain"
         }
       ]
     },
@@ -33,19 +31,16 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "path",
-          "foreground": "p:blue",
-          "properties": {
+          "options": {
             "max_depth": 5,
             "style": "agnoster_short"
           },
-          "template": "\uf07c  {{ .Path }} "
+          "template": "\uf07c  {{ .Path }} ",
+          "foreground": "p:blue",
+          "type": "path"
         },
         {
-          "type": "git",
-          "style": "plain",
-          "template": "{{ .HEAD }} ",
-          "properties": {
+          "options": {
             "branch_icon": "\ue725 ",
             "cherry_pick_icon": "\ue29b ",
             "commit_icon": "\uf417 ",
@@ -56,22 +51,27 @@
             "rebase_icon": "\ue728 ",
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
-          }
+          },
+          "template": "{{ .HEAD }} ",
+          "type": "git",
+          "style": "plain"
         }
       ]
     },
     {
-      "alignment": "left",
-      "newline": true,
       "type": "prompt",
+      "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
+          "template": "\udb81\ude0d ",
           "foreground": "p:text",
-          "template": "\udb81\ude0d "
+          "type": "text",
+          "style": "plain"
         }
-      ]
+      ],
+      "newline": true
     }
-  ]
+  ],
+  "version": 4,
+  "final_space": true
 }
