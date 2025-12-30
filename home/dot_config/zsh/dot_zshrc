@@ -109,3 +109,10 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # zstyle ':completion:*' menu select
 # zstyle ':completion:*' list-colors 'ma=7'
+
+
+# ╔══════════════════════════════════════╗
+# ║         SYNTAX HIGHLIGHTING          ║
+# ╚══════════════════════════════════════╝
+
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
