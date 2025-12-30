@@ -2,8 +2,8 @@
 # ║               CONFIG                 ║
 # ╚══════════════════════════════════════╝
 
-# Make $path a unique array (no duplicates)
-typeset -U path
+# Make $fpath and $path a unique array (no duplicates)
+typeset -U fpath path
 
 
 # ╔══════════════════════════════════════╗
