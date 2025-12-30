@@ -11,22 +11,22 @@ typeset -U path
 # ╚══════════════════════════════════════╝
 
 # --- Navigation & Listing ---
-alias ll='ls -lh'         # long listing with human-readable sizes
-alias la='ls -A'          # list all files except . and ..
-alias l='ls -CF'          # quick listing with file indicators
-alias c='clear'           # clear the terminal
+alias ll="ls -lh"         # long listing with human-readable sizes
+alias la="ls -Al"          # list all files except . and ..
+alias l="ls -CF"          # quick listing with file indicators
+alias c="clear"           # clear the terminal
 
 # --- Safety Wrappers ---
-alias cp='cp -i'          # copy with confirmation before overwriting
-alias mv='mv -i'          # move with confirmation before overwriting
-alias rm='rm -i'          # remove with confirmation before deleting
+alias cp="cp -i"          # copy with confirmation before overwriting
+alias mv="mv -i"          # move with confirmation before overwriting
+alias rm="rm -i"          # remove with confirmation before deleting
 
 # --- Tools ---
-alias cz='chezmoi'        # shortcut for chezmoi
-alias df='df -h'          # human-readable disk space usage
-alias du='du -h -d 1'     # human-readable directory sizes, one level deep
-alias k='kubectl'         # shorthand for kubectl
-alias vim='nvim'          # use neovim instead of vim
+alias cz="chezmoi"        # shortcut for chezmoi
+alias df="df -h"          # human-readable disk space usage
+alias du="du -h -d 1"     # human-readable directory sizes, one level deep
+alias k="kubectl"         # shorthand for kubectl
+alias vim="nvim"          # use neovim instead of vim
 
 
 # ╔══════════════════════════════════════╗
