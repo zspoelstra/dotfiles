@@ -16,13 +16,22 @@
 (defsrc
   f1  f2  f3  f4  f5  f6  f7  f8  f9  f10  f11  f12
   caps
+  fn
 )
 
 (defalias
   escctrl (tap-hold-press 200 200 esc lctl)
+  fn (tap-hold-press 200 200 fn (layer-toggle fkeys))
 )
 
 (deflayer base
-  brup  brdown  mctl  sls  dtn  _  prev  pp  next  mute  vold  volu
+  brdown  brup  mctl  sls  dtn  _  prev  pp  next  mute  vold  volu
   @escctrl
+  @fn
+)
+
+(deflayer fkeys
+  f1  f2  f3  f4  f5  f6  f7  f8  f9  f10  f11  f12
+  _
+  _
 )
