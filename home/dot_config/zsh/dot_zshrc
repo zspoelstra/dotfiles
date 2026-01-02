@@ -80,7 +80,10 @@ compinit                  # initialize completions (TAB completion now works)
 
 # Postgres.app
 local POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
-[[ -d "${POSTGRES_PATH}" ]] && path+=("${POSTGRES_PATH}")
+[[ -d "${POSTGRES_PATH}" ]] && path=("${POSTGRES_PATH}" $path)
+
+# .local/bin
+path=("${HOME}/.local/bin" $path)
 
 
 # ╔══════════════════════════════════════╗
@@ -88,7 +91,7 @@ local POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 # ╚══════════════════════════════════════╝
 
 if (( $+commands[oh-my-posh] )); then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
+  eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/config.json)"
 fi
 
 

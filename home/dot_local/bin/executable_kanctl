@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+usage() {
+  echo "usage: kanctl restart"
+  exit 1
+}
+
+restart() {
+  echo "Restarting kanata..."
+  launchctl kickstart -k system/com.zspoelstra.kanata
+}
+
+if [[ $EUID -ne 0 ]]; then
+  echo "error: must be run as root"
+  usage
+fi
+
+[[ $# -eq 1 ]] || usage
+
+case "$1" in
+  restart) restart ;;
+  *) usage ;;
+esac
