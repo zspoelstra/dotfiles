@@ -83,8 +83,9 @@ compinit                  # initialize completions (TAB completion now works)
 [[ -d "${ANDROID_HOME/platform-tools}" ]] && path=("${ANDROID_HOME}/platform-tools" $path)
 
 # Postgres.app
-local POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
+POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 [[ -d "${POSTGRES_PATH}" ]] && path=("${POSTGRES_PATH}" $path)
+unset POSTGRES_PATH
 
 # .local/bin
 [[ -d "${HOME}/.local/bin" ]] && path=("${HOME}/.local/bin" $path)
