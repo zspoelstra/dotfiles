@@ -1,11 +1,10 @@
-;; Basic configuration. This will exclude both the Keychron mouse and
-;; the Voyager split keyboard. We also set `process-unmapped-keys` so
-;; that we only need to specify the keys we want to handle in defsrc
+;; Basic configuration. This will only inlude the internal Apple keyboard
+;; and the WASD keyboard ("USB Keyboard"). We also set `process-unmapped-keys`
+;; so that we only need to specify the keys we want to handle in defsrc
 (defcfg
-  macos-dev-names-exclude (
-    "Keychron Link"
-    "Keychron M3"
-    "Voyager"
+  macos-dev-names-include (
+    "Apple Internal Keyboard / Trackpad"
+    "USB Keyboard"
   )
   process-unmapped-keys yes
 )
