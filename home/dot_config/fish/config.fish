@@ -42,6 +42,11 @@ abbr -a vim nvim
 # 1Password SSH
 set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
+# android
+set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
+fish_add_path -a "$ANDROID_HOME/emulator"
+fish_add_path -a "$ANDROID_HOME/platform-tools"
+
 # brew
 if test -x /opt/homebrew/bin/brew
   set -gx HOMEBREW_NO_ENV_HINTS true
