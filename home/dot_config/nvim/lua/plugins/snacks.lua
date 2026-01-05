@@ -44,6 +44,13 @@ return {
       desc = "Recent Files",
     },
     {
+      "<leader>fw",
+      function()
+        Snacks.picker.grep_word()
+      end,
+      desc = "Word",
+    },
+    {
       "<leader>fR",
       function()
         Snacks.picker.resume()
