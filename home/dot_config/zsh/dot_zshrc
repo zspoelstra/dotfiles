@@ -48,22 +48,17 @@ setopt SHARE_HISTORY             # share history across running Zsh sessions
 
 
 # ╔══════════════════════════════════════╗
-# ║              HOMEBREW                ║
+# ║              TOOLING                 ║
 # ╚══════════════════════════════════════╝
 
+# Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   fpath+=( "${HOMEBREW_PREFIX}/share/zsh-completions" )
 fi
 
-
-# ╔══════════════════════════════════════╗
-# ║                MISE                  ║
-# ╚══════════════════════════════════════╝
-
-if (( $+commands[mise] )); then
-  eval "$(mise activate zsh --shims)"
-fi
+# Mise
+(( $+commands[mise] )) && eval "$(mise activate zsh --shims)"
 
 
 # ╔══════════════════════════════════════╗
