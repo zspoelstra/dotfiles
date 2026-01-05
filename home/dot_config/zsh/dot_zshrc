@@ -78,6 +78,10 @@ compinit                  # initialize completions (TAB completion now works)
 # ║                PATHS                 ║
 # ╚══════════════════════════════════════╝
 
+# Android SDK
+[[ -d "${ANDROID_HOME/emulator}" ]] && path=("${ANDROID_HOME}/emulator" $path)
+[[ -d "${ANDROID_HOME/platform-tools}" ]] && path=("${ANDROID_HOME}/platform-tools" $path)
+
 # Postgres.app
 local POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 [[ -d "${POSTGRES_PATH}" ]] && path=("${POSTGRES_PATH}" $path)
