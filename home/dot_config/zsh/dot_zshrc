@@ -83,7 +83,7 @@ local POSTGRES_PATH="/Applications/Postgres.app/Contents/Versions/latest/bin"
 [[ -d "${POSTGRES_PATH}" ]] && path=("${POSTGRES_PATH}" $path)
 
 # .local/bin
-path=("${HOME}/.local/bin" $path)
+[[ -d "${HOME}/.local/bin" ]] && path=("${HOME}/.local/bin" $path)
 
 
 # ╔══════════════════════════════════════╗
