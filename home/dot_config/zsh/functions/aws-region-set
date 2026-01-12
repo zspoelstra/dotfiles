@@ -1,0 +1,4 @@
+aws-region-set() {
+  export AWS_REGION="$1"
+  echo "AWS_REGION set to $AWS_REGION"
+}

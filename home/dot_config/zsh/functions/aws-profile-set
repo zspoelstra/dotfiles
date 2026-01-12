@@ -1,0 +1,4 @@
+aws-profile-set() {
+  export AWS_PROFILE="$1"
+  aws iam list-account-aliases &> /dev/null || aws sso login
+}

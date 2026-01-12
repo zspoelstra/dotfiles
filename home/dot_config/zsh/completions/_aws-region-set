@@ -1,0 +1,4 @@
+#compdef aws-region-set
+
+local regions=(us-east-1 us-east-2)
+_describe 'AWS regions' regions

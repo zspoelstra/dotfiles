@@ -47,6 +47,18 @@ setopt HIST_IGNORE_SPACE         # don’t record commands starting with a space
 setopt INC_APPEND_HISTORY        # write history immediately
 setopt SHARE_HISTORY             # share history across running Zsh sessions
 
+# ╔══════════════════════════════════════╗
+# ║             FUNCTIONS                ║
+# ╚══════════════════════════════════════╝
+
+# Add our custom functions and completion
+fpath=($ZDOTDIR/functions $ZDOTDIR/completions $fpath)
+
+# Autoload all functions
+for func in $ZDOTDIR/functions/*(:t); do
+  autoload -Uz $func
+done
+
 
 # ╔══════════════════════════════════════╗
 # ║              TOOLING                 ║
