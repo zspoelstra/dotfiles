@@ -78,8 +78,11 @@ fi
 # ║            COMPLETIONS               ║
 # ╚══════════════════════════════════════╝
 
-autoload -Uz compinit     # prepare the completion system for use
-compinit                  # initialize completions (TAB completion now works)
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu select
 
 
 # ╔══════════════════════════════════════╗
@@ -127,9 +130,6 @@ source "${HOMEBREW_PREFIX}/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.
 source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# zstyle ':completion:*' menu select
-# zstyle ':completion:*' list-colors 'ma=7'
 
 
 # ╔══════════════════════════════════════╗
