@@ -6,6 +6,7 @@ vim.g.maplocalleader = "\\"
 vim.g.no_plugin_maps = true
 
 -- Options
+vim.opt.autoread = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
 vim.opt.expandtab = true
