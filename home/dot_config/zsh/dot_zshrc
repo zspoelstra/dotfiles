@@ -20,7 +20,7 @@ alias cd..="cd .."
 # --- Safety Wrappers ---
 alias cp="cp -i"
 alias mv="mv -i"
-alias rm="rm -i"
+alias rm="trash"
 
 # --- Tools ---
 alias cz="chezmoi"
